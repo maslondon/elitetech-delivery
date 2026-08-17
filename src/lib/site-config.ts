@@ -5,7 +5,7 @@ export const siteConfig = {
   url: "https://www.elitetechdelivery.co.uk",
   description:
     "Elite Tech Delivery helps businesses design, build and deliver modern digital solutions — from high-performance websites and custom web applications to practical AI solutions and technical delivery consultancy.",
-  email: "hello@elitetechdelivery.co.uk",
+  email: "marc@elitetechdelivery.co.uk",
   phone: "", // PLACEHOLDER: add a contact number if the business wants one published
   linkedin: "https://www.linkedin.com/company/elite-tech-delivery", // PLACEHOLDER: confirm real LinkedIn URL
   companyNumber: "[PLACEHOLDER — Companies House registration number]",

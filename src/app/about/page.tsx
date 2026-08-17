@@ -45,7 +45,7 @@ export default function AboutPage() {
               <div className="group aspect-[4/5] w-full max-w-sm overflow-hidden rounded-2xl bg-ink/5 ring-1 ring-ink/10">
                 <Image
                   src="/images/founder.jpg"
-                  alt="Founder, Elite Tech Delivery"
+                  alt="Marc Schneider, Founder of Elite Tech Delivery"
                   width={1254}
                   height={1254}
                   className="h-full w-full object-cover grayscale transition-all duration-500 ease-out group-hover:grayscale-0"
@@ -53,7 +53,7 @@ export default function AboutPage() {
                 />
               </div>
               <p className="mt-4 max-w-sm text-sm text-stone">
-                [PLACEHOLDER — Founder name], Founder, Elite Tech Delivery
+                Marc Schneider, Founder, Elite Tech Delivery
               </p>
             </div>
 
