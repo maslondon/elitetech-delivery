@@ -9,6 +9,10 @@ import { Button } from "@/components/ui/Button";
 import { primaryNav } from "@/lib/site-config";
 import { clsx } from "@/lib/clsx";
 
+// The wordmark already links home, so the header nav omits a redundant
+// "Home" entry — the footer nav follows the same convention.
+const headerNav = primaryNav.filter((item) => item.href !== "/");
+
 export function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
@@ -26,9 +30,8 @@ export function Header() {
         <Wordmark variant="header" />
 
         <nav className="hidden items-center gap-9 md:flex" aria-label="Primary">
-          {primaryNav.map((item) => {
-            const isActive =
-              item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
+          {headerNav.map((item) => {
+            const isActive = pathname.startsWith(item.href);
             return (
               <Link
                 key={item.href}
@@ -74,9 +77,8 @@ export function Header() {
       {open && (
         <div id="mobile-nav" className="border-t border-white/10 bg-ink md:hidden">
           <Container className="flex flex-col gap-1 py-6">
-            {primaryNav.map((item) => {
-              const isActive =
-                item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
+            {headerNav.map((item) => {
+              const isActive = pathname.startsWith(item.href);
               return (
                 <Link
                   key={item.href}
