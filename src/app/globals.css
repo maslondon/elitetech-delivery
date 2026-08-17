@@ -6,6 +6,10 @@
   --color-bronze: #b08d57;
   --color-bronze-dark: #96754a;
   --color-stone: #5f5e5a;
+  /* Lighter neutral used only for nav text on the ink header — #5f5e5a
+     (stone) only clears ~3:1 against ink, short of the 4.5:1 AA text
+     threshold, so this is the minimum lift needed to pass. */
+  --color-mist: #b0afa9;
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, sans-serif;
 

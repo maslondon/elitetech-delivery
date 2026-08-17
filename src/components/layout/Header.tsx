@@ -21,9 +21,9 @@ export function Header() {
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-ink/10 bg-ivory/90 backdrop-blur-sm">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-ink">
       <Container className="flex h-20 items-center justify-between">
-        <Wordmark />
+        <Wordmark variant="header" />
 
         <nav className="hidden items-center gap-9 md:flex" aria-label="Primary">
           {primaryNav.map((item) => {
@@ -35,7 +35,7 @@ export function Header() {
                 href={item.href}
                 className={clsx(
                   "text-[15px] font-medium transition-colors",
-                  isActive ? "text-ink" : "text-stone hover:text-ink"
+                  isActive ? "text-white" : "text-mist hover:text-white"
                 )}
                 aria-current={isActive ? "page" : undefined}
               >
@@ -47,14 +47,14 @@ export function Header() {
 
         <div className="hidden md:block">
           <Button href="/contact" variant="primary" className="px-5 py-2.5 text-sm">
-            Book a free consultation
+            Book a consultation
           </Button>
         </div>
 
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
-          className="flex h-10 w-10 items-center justify-center rounded-full text-ink md:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-full text-white md:hidden"
           aria-expanded={open}
           aria-controls="mobile-nav"
           aria-label={open ? "Close menu" : "Open menu"}
@@ -72,25 +72,33 @@ export function Header() {
       </Container>
 
       {open && (
-        <div id="mobile-nav" className="border-t border-ink/10 bg-ivory md:hidden">
+        <div id="mobile-nav" className="border-t border-white/10 bg-ink md:hidden">
           <Container className="flex flex-col gap-1 py-6">
-            {primaryNav.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                onClick={() => setOpen(false)}
-                className="rounded-lg px-3 py-3 text-base font-medium text-ink hover:bg-ink/5"
-              >
-                {item.label}
-              </Link>
-            ))}
+            {primaryNav.map((item) => {
+              const isActive =
+                item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setOpen(false)}
+                  className={clsx(
+                    "rounded-lg px-3 py-3 text-base font-medium transition-colors",
+                    isActive ? "text-white" : "text-mist hover:text-white"
+                  )}
+                  aria-current={isActive ? "page" : undefined}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
             <Button
               href="/contact"
               variant="primary"
               onClick={() => setOpen(false)}
-              className="mt-3 w-full"
+              className="mt-3 min-h-[44px] w-full"
             >
-              Book a free consultation
+              Book a consultation
             </Button>
           </Container>
         </div>

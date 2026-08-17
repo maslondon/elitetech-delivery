@@ -2,7 +2,12 @@ import Link from "next/link";
 import { clsx } from "@/lib/clsx";
 
 type WordmarkProps = {
-  variant?: "light" | "dark";
+  /**
+   * "light" — ink text, for ivory backgrounds.
+   * "dark" — ivory text, for ink backgrounds (footer).
+   * "header" — pure white text, for the site header specifically (ink bg).
+   */
+  variant?: "light" | "dark" | "header";
   className?: string;
 };
 
@@ -12,7 +17,8 @@ type WordmarkProps = {
  * than a second name.
  */
 export function Wordmark({ variant = "light", className }: WordmarkProps) {
-  const primaryColor = variant === "light" ? "text-ink" : "text-ivory";
+  const primaryColor =
+    variant === "light" ? "text-ink" : variant === "header" ? "text-white" : "text-ivory";
 
   return (
     <Link
@@ -22,13 +28,18 @@ export function Wordmark({ variant = "light", className }: WordmarkProps) {
     >
       <span
         className={clsx(
-          "text-[17px] sm:text-[19px] font-medium tracking-tight",
+          "text-[18px] sm:text-[19px] font-medium tracking-tight",
           primaryColor
         )}
       >
         ELITE TECH
       </span>
-      <span className="mt-1 text-[10px] sm:text-[11px] font-medium tracking-[0.3em] text-bronze">
+      <span
+        className={clsx(
+          "mt-1 text-[10px] sm:text-[11px] text-bronze",
+          variant === "header" ? "font-normal tracking-[5px]" : "font-medium tracking-[0.3em]"
+        )}
+      >
         DELIVERY
       </span>
     </Link>
