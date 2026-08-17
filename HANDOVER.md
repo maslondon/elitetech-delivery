@@ -46,7 +46,21 @@ Steps:
 
 ## Environment variables
 
-None are required to build or run V1. The contact form works end-to-end
+`NEXT_PUBLIC_GA_MEASUREMENT_ID` — optional. Set this to your GA4 Measurement
+ID (looks like `G-XXXXXXXXXX`) to enable Google Analytics. Until it's set,
+[GoogleAnalytics](src/components/GoogleAnalytics.tsx) renders nothing —
+completely inert. Once set, GA still won't load until a visitor explicitly
+accepts the cookie banner
+([CookieConsent](src/components/CookieConsent.tsx)) — this is required
+under UK PECR, since analytics cookies aren't "strictly necessary." Add it
+to `.env.local` for local development (already git-ignored) and as an
+environment variable in Vercel's project settings for production.
+
+If you don't have a GA4 property yet: analytics.google.com → Admin → Create
+Property → add a "Web" data stream for elitetechdelivery.co.uk → the
+Measurement ID is shown on that data stream's page.
+
+Nothing else is required to build or run V1. The contact form works end-to-end
 today — it validates input and logs the enquiry server-side
 ([src/app/api/contact/route.ts](src/app/api/contact/route.ts)) — but nothing
 currently emails you when someone submits it.
