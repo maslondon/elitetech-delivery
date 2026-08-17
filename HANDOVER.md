@@ -60,6 +60,11 @@ If you don't have a GA4 property yet: analytics.google.com → Admin → Create
 Property → add a "Web" data stream for elitetechdelivery.co.uk → the
 Measurement ID is shown on that data stream's page.
 
+`NEXT_PUBLIC_SANITY_PROJECT_ID` and `NEXT_PUBLIC_SANITY_DATASET` — optional,
+enable the Sanity CMS. See the "CMS — Sanity" section below for the full
+setup. Already set in `.env.local` for local dev; still needs adding to
+Vercel's environment variables for the live site.
+
 Nothing else is required to build or run V1. The contact form works end-to-end
 today — it validates input and logs the enquiry server-side
 ([src/app/api/contact/route.ts](src/app/api/contact/route.ts)) — but nothing
@@ -90,20 +95,37 @@ Add `RESEND_API_KEY` as an environment variable in Vercel (or your host).
 Alternatives if preferred: SendGrid, Postmark, or a plain SMTP transport via
 Nodemailer.
 
-## CMS recommendation
+## CMS — Sanity (built in, three steps from fully live)
 
-**None for V1** — content lives in typed data files
-([src/lib/content/services.ts](src/lib/content/services.ts),
-[src/lib/content/insights.ts](src/lib/content/insights.ts)) and page
-components. This keeps the site simple, fast and free to host, at the cost
-of needing a small code change (and redeploy) to update copy.
+Every page's copy (Home, Services, About, Insights, Contact, Footer, nav
+labels, Privacy/Terms) is wired to **Sanity**, with a safe fallback: until
+content actually exists in Sanity, every page silently uses the original
+static copy in `src/lib/content/*` — nothing breaks if any of the steps
+below haven't happened yet.
 
-If the owner will be publishing Insights articles regularly and doesn't want
-to touch code, the cleanest upgrade path is **Sanity** (generous free tier,
-strong Next.js integration) — swap `getArticleBySlug`/`articles` in
-`insights.ts` for a Sanity query, and everything else (routing, SEO,
-article template) stays the same. Worth revisiting once there's a real
-publishing cadence rather than building it speculatively now.
+**To go fully live:**
+
+1. **Allow this site's URLs in Sanity.** Visit `/studio` on both localhost
+   and the live domain — it'll prompt to "Add CORS origin" for each. Needs
+   to be done once while logged into the Sanity account that owns the
+   project (Project ID `4bek2gcj`).
+2. **Add the same two env vars to Vercel** (Settings → Environment
+   Variables, same place as `NEXT_PUBLIC_GA_MEASUREMENT_ID`), then redeploy:
+   - `NEXT_PUBLIC_SANITY_PROJECT_ID` = `4bek2gcj`
+   - `NEXT_PUBLIC_SANITY_DATASET` = `production`
+3. **Import today's existing copy as a starting point**, so Studio opens
+   pre-populated instead of empty:
+   ```bash
+   npx sanity login   # one-time, opens a browser — same pattern as gh auth login
+   npx sanity exec scripts/seed.ts --with-user-token
+   ```
+   Safe to re-run — it replaces the same fixed document IDs each time
+   rather than duplicating anything.
+
+After that, `/studio` is the editing interface — logged in with a real
+Sanity account (email/Google/GitHub), not a shared password. Structural
+changes (new pages, new nav items, layout) still go through code — see
+`src/sanity/schemaTypes/` for exactly what's editable per page.
 
 ## Content that still needs replacing
 
