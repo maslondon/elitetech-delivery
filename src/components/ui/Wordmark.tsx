@@ -28,7 +28,7 @@ export function Wordmark({ variant = "light", className }: WordmarkProps) {
     >
       <span
         className={clsx(
-          "text-[18px] sm:text-[19px] font-medium tracking-tight",
+          "text-[19px] sm:text-[21px] font-semibold tracking-tight",
           primaryColor
         )}
       >
@@ -36,8 +36,8 @@ export function Wordmark({ variant = "light", className }: WordmarkProps) {
       </span>
       <span
         className={clsx(
-          "mt-1 text-[10px] sm:text-[11px] text-bronze",
-          variant === "header" ? "font-normal tracking-[5px]" : "font-medium tracking-[0.3em]"
+          "mt-1 text-[9px] sm:text-[10px] text-bronze",
+          variant === "header" ? "font-normal tracking-[4px]" : "font-medium tracking-[0.25em]"
         )}
       >
         DELIVERY
