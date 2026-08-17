@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Container } from "./Container";
 import { Wordmark } from "@/components/ui/Wordmark";
 import { footerNav, legalNav, siteConfig } from "@/lib/site-config";
+import { CookiePreferencesLink } from "@/components/CookiePreferencesLink";
 
 export function Footer() {
   return (
@@ -67,6 +68,7 @@ export function Footer() {
                 {item.label}
               </Link>
             ))}
+            <CookiePreferencesLink className="hover:text-bronze" />
           </div>
         </div>
       </Container>

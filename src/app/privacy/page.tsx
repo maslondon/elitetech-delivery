@@ -61,9 +61,10 @@ export default function PrivacyPage() {
             details of your enquiry.
           </p>
           <p className={`${prose} mt-3`}>
-            We do not collect personal data automatically through cookies,
-            tracking pixels, or analytics tools — this website does not
-            currently use any of these. See &quot;Cookies&quot; below.
+            If you accept analytics cookies via the cookie banner, we also
+            collect anonymised usage data through Google Analytics — see
+            &quot;Cookies&quot; below for details. Nothing is collected this
+            way unless you actively accept.
           </p>
           <p className={`${prose} mt-3`}>
             Our hosting provider may automatically log limited technical
@@ -108,11 +109,44 @@ export default function PrivacyPage() {
 
           <h2 className={h2}>Cookies</h2>
           <p className={`${prose} mt-3`}>
-            This website does not currently use cookies, analytics, or any
-            other tracking technology, so no cookie consent banner is
-            required. If this changes in future — for example, if we add
-            website analytics — we will update this policy and, where
-            required by law, ask for your consent first.
+            When you first visit this website, we ask whether you&apos;re
+            happy for us to use Google Analytics to understand how visitors
+            use the site. No analytics cookies are set unless you accept —
+            if you decline, or don&apos;t respond, none are used. You can
+            change your decision at any time via &quot;Cookie
+            preferences&quot; in the footer.
+          </p>
+          <p className={`${prose} mt-3`}>
+            If you accept, Google Analytics sets the following cookies:
+          </p>
+          <ul className="mt-3 space-y-2">
+            <li className={prose}>
+              <span className="font-medium text-ink">_ga</span> — distinguishes
+              unique visitors. Expires after 2 years.
+            </li>
+            <li className={prose}>
+              <span className="font-medium text-ink">_ga_&lt;container-id&gt;</span> —
+              persists session state. Expires after 2 years.
+            </li>
+          </ul>
+          <p className={`${prose} mt-3`}>
+            This data is processed by Google Ireland Limited. It is
+            anonymised/aggregated and used only to understand site usage
+            (for example, which pages are visited and roughly how many
+            visitors we get) — we do not use it to individually identify
+            you. See{" "}
+            <a
+              href="https://policies.google.com/privacy"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="text-bronze-dark hover:underline"
+            >
+              Google&apos;s Privacy Policy
+            </a>{" "}
+            for how Google handles this data. We also set one small,
+            strictly necessary item in your browser&apos;s local storage to
+            remember your cookie choice itself — this is not a tracking
+            cookie and doesn&apos;t require consent.
           </p>
 
           <h2 className={h2}>International transfers</h2>
