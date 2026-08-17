@@ -7,7 +7,7 @@ import { pageMetadata } from "@/lib/metadata";
 export const metadata = pageMetadata({
   title: "Contact",
   description:
-    "Book a free consultation with Elite Tech Delivery about a website, web application, AI solution or technical delivery need.",
+    "Book a consultation with Elite Tech Delivery about a website, web application, AI solution or technical delivery need.",
   path: "/contact",
 });
 
@@ -19,7 +19,7 @@ export default function ContactPage() {
           <div>
             <Eyebrow>Contact</Eyebrow>
             <h1 className="mt-4 text-4xl font-medium tracking-tight text-ink text-balance sm:text-5xl">
-              Book a free consultation
+              Book a consultation
             </h1>
             <p className="mt-6 max-w-md text-lg leading-relaxed text-stone">
               Whether you&apos;re planning a new website, exploring a digital
