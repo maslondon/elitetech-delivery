@@ -32,9 +32,6 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
   },
-  icons: {
-    icon: "/favicon.ico",
-  },
 };
 
 const organizationJsonLd = {
