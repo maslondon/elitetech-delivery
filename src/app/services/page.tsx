@@ -1,8 +1,8 @@
 import { Container } from "@/components/layout/Container";
 import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { services } from "@/lib/content/services";
 import { pageMetadata } from "@/lib/metadata";
+import { getServices, getServicesPage } from "@/sanity/fetch";
 
 export const metadata = pageMetadata({
   title: "Services",
@@ -11,21 +11,19 @@ export const metadata = pageMetadata({
   path: "/services",
 });
 
-export default function ServicesPage() {
+export default async function ServicesPage() {
+  const [page, services] = await Promise.all([getServicesPage(), getServices()]);
+
   return (
     <>
       <section className="pt-16 pb-14 sm:pt-24 sm:pb-16">
         <Container>
           <div className="max-w-2xl">
-            <Eyebrow>Services</Eyebrow>
+            <Eyebrow>{page.eyebrow}</Eyebrow>
             <h1 className="mt-4 text-4xl font-medium tracking-tight text-ink text-balance sm:text-5xl">
-              Four ways we help businesses build and deliver
+              {page.heading}
             </h1>
-            <p className="mt-6 text-lg leading-relaxed text-stone">
-              Each service can stand alone or work alongside the others. Most
-              relationships start with a website or a digital product and
-              extend from there.
-            </p>
+            <p className="mt-6 text-lg leading-relaxed text-stone">{page.intro}</p>
           </div>
 
           <nav aria-label="Jump to service" className="mt-10 flex flex-wrap gap-3">
@@ -111,15 +109,12 @@ export default function ServicesPage() {
         <Container className="flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <h2 className="text-2xl font-medium tracking-tight text-ink sm:text-3xl">
-              Not sure which service fits?
+              {page.bottomHeading}
             </h2>
-            <p className="mt-2 max-w-lg text-stone">
-              That&apos;s a normal starting point. Tell us what you&apos;re trying to
-              achieve and we&apos;ll help you work out the best approach.
-            </p>
+            <p className="mt-2 max-w-lg text-stone">{page.bottomBody}</p>
           </div>
           <Button href="/contact" variant="primary" className="shrink-0">
-            Book a consultation
+            {page.bottomButtonLabel}
           </Button>
         </Container>
       </section>

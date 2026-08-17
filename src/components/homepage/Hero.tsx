@@ -1,31 +1,28 @@
 import { Container } from "@/components/layout/Container";
 import { Button } from "@/components/ui/Button";
+import type { HomePageData } from "@/sanity/fetch";
 
-export function Hero() {
+export function Hero({ data }: { data: HomePageData }) {
   return (
     <section className="relative overflow-hidden pt-16 pb-20 sm:pt-24 sm:pb-28">
       <HeroMotif />
       <Container className="relative">
         <div className="max-w-3xl">
           <p className="text-sm font-medium uppercase tracking-[0.2em] text-bronze-dark">
-            Digital delivery, done properly
+            {data.heroEyebrow}
           </p>
           <h1 className="mt-5 text-4xl font-medium tracking-tight text-ink text-balance sm:text-5xl lg:text-6xl">
-            Websites, digital products and technology delivery that move your
-            business forward
+            {data.heroHeadline}
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-stone">
-            Elite Tech Delivery helps businesses design, build and deliver
-            modern digital solutions — from high-performance websites and
-            custom web applications to practical AI solutions and technical
-            delivery consultancy.
+            {data.heroSubhead}
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
             <Button href="/contact" variant="primary">
-              Book a consultation
+              {data.heroPrimaryCta}
             </Button>
             <Button href="/services" variant="secondary">
-              View our services
+              {data.heroSecondaryCta}
             </Button>
           </div>
         </div>

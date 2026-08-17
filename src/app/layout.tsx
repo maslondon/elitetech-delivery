@@ -7,6 +7,7 @@ import { siteConfig } from "@/lib/site-config";
 import { RevealInit } from "@/components/RevealInit";
 import { CookieConsent } from "@/components/CookieConsent";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
+import { getSiteSettings, getFooter } from "@/sanity/fetch";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -47,7 +48,9 @@ const organizationJsonLd = {
   areaServed: "GB",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default async function RootLayout({ children }: LayoutProps<"/">) {
+  const [settings, footer] = await Promise.all([getSiteSettings(), getFooter()]);
+
   return (
     <html lang="en-GB" className={`${inter.variable} h-full`}>
       <body className="flex min-h-full flex-col font-sans antialiased">
@@ -61,11 +64,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         >
           Skip to content
         </a>
-        <Header />
+        <Header settings={settings} />
         <main id="main-content" className="flex-1">
           {children}
         </main>
-        <Footer />
+        <Footer settings={settings} footer={footer} />
         <RevealInit />
         <CookieConsent />
         <GoogleAnalytics />

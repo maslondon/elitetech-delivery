@@ -1,6 +1,8 @@
 import { Container } from "@/components/layout/Container";
+import { PortableBody } from "@/components/PortableBody";
 import { pageMetadata } from "@/lib/metadata";
 import { siteConfig } from "@/lib/site-config";
+import { getLegalPage } from "@/sanity/fetch";
 
 export const metadata = pageMetadata({
   title: "Privacy Policy",
@@ -11,7 +13,36 @@ export const metadata = pageMetadata({
 const prose = "text-[17px] leading-[1.7] text-ink/80";
 const h2 = "mt-10 text-xl font-medium tracking-tight text-ink";
 
-export default function PrivacyPage() {
+export default async function PrivacyPage() {
+  const cms = await getLegalPage("privacy");
+
+  // Once edited in Sanity Studio, the CMS version takes over completely.
+  // Until then, the fully-linked default policy below is shown as-is.
+  if (cms?.body?.length) {
+    return (
+      <section className="pt-16 pb-24 sm:pt-24 sm:pb-28">
+        <Container>
+          <div className="mx-auto max-w-2xl">
+            <h1 className="text-4xl font-medium tracking-tight text-ink sm:text-5xl">
+              {cms.heading || "Privacy Policy"}
+            </h1>
+            {cms.lastUpdated && (
+              <p className="mt-4 text-sm text-stone">Last updated: {cms.lastUpdated}</p>
+            )}
+            {cms.noteBox && (
+              <div className="mt-6 rounded-xl bg-white/60 p-5 text-sm leading-relaxed text-stone ring-1 ring-ink/10">
+                {cms.noteBox}
+              </div>
+            )}
+            <div className="mt-8">
+              <PortableBody value={cms.body} />
+            </div>
+          </div>
+        </Container>
+      </section>
+    );
+  }
+
   return (
     <section className="pt-16 pb-24 sm:pt-24 sm:pb-28">
       <Container>

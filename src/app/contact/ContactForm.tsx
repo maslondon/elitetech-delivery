@@ -2,7 +2,6 @@
 
 import { useState, type FormEvent } from "react";
 import { Button } from "@/components/ui/Button";
-import { siteConfig } from "@/lib/site-config";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
@@ -11,7 +10,14 @@ const inputClasses =
 
 const labelClasses = "text-sm font-medium text-ink";
 
-export function ContactForm() {
+type ContactFormProps = {
+  email: string;
+  submitButtonLabel: string;
+  successHeading: string;
+  successBody: string;
+};
+
+export function ContactForm({ email, submitButtonLabel, successHeading, successBody }: ContactFormProps) {
   const [status, setStatus] = useState<Status>("idle");
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
@@ -55,12 +61,11 @@ export function ContactForm() {
   if (status === "success") {
     return (
       <div className="rounded-2xl bg-white/60 p-8 ring-1 ring-ink/10 sm:p-10">
-        <h2 className="text-xl font-medium tracking-tight text-ink">Thank you — message sent</h2>
+        <h2 className="text-xl font-medium tracking-tight text-ink">{successHeading}</h2>
         <p className="mt-3 text-[15px] leading-relaxed text-stone">
-          We&apos;ve received your enquiry and will come back to you shortly. If it&apos;s
-          urgent, you can also email us directly at{" "}
-          <a href={`mailto:${siteConfig.email}`} className="text-bronze-dark hover:underline">
-            {siteConfig.email}
+          {successBody}{" "}
+          <a href={`mailto:${email}`} className="text-bronze-dark hover:underline">
+            {email}
           </a>
           .
         </p>
@@ -121,7 +126,7 @@ export function ContactForm() {
       )}
 
       <Button as="button" type="submit" variant="primary" disabled={status === "submitting"} className="w-full sm:w-auto">
-        {status === "submitting" ? "Sending…" : "Send enquiry"}
+        {status === "submitting" ? "Sending…" : submitButtonLabel}
       </Button>
 
       <p className="text-xs leading-relaxed text-stone">

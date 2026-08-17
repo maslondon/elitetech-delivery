@@ -3,10 +3,11 @@ import Link from "next/link";
 import { Container } from "@/components/layout/Container";
 import { Button } from "@/components/ui/Button";
 import { ArticleBody } from "@/components/insights/ArticleBody";
-import { articles, getArticleBySlug } from "@/lib/content/insights";
 import { pageMetadata } from "@/lib/metadata";
+import { getArticles, getArticleBySlug } from "@/sanity/fetch";
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
+  const articles = await getArticles();
   return articles.map((article) => ({ slug: article.slug }));
 }
 
@@ -16,7 +17,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const article = getArticleBySlug(slug);
+  const article = await getArticleBySlug(slug);
   if (!article) return {};
 
   return pageMetadata({
@@ -40,10 +41,10 @@ export default async function ArticlePage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const article = getArticleBySlug(slug);
+  const [article, allArticles] = await Promise.all([getArticleBySlug(slug), getArticles()]);
   if (!article) notFound();
 
-  const otherArticles = articles.filter((a) => a.slug !== article.slug).slice(0, 2);
+  const otherArticles = allArticles.filter((a) => a.slug !== article.slug).slice(0, 2);
 
   return (
     <article className="pt-16 pb-24 sm:pt-24 sm:pb-28">

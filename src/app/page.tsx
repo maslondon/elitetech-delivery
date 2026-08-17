@@ -4,16 +4,19 @@ import { ServicesBento } from "@/components/homepage/ServicesBento";
 import { WhySection } from "@/components/homepage/WhySection";
 import { ProcessSection } from "@/components/homepage/ProcessSection";
 import { FinalCta } from "@/components/homepage/FinalCta";
+import { getHomePage, getServices } from "@/sanity/fetch";
 
-export default function HomePage() {
+export default async function HomePage() {
+  const [homeData, services] = await Promise.all([getHomePage(), getServices()]);
+
   return (
     <>
-      <Hero />
-      <TrustSection />
-      <ServicesBento />
-      <WhySection />
-      <ProcessSection />
-      <FinalCta />
+      <Hero data={homeData} />
+      <TrustSection data={homeData} />
+      <ServicesBento data={homeData} services={services} />
+      <WhySection data={homeData} />
+      <ProcessSection data={homeData} />
+      <FinalCta data={homeData} />
     </>
   );
 }

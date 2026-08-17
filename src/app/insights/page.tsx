@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { Container } from "@/components/layout/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { articles } from "@/lib/content/insights";
 import { pageMetadata } from "@/lib/metadata";
+import { getArticles, getInsightsPage } from "@/sanity/fetch";
 
 export const metadata = pageMetadata({
   title: "Insights",
@@ -19,19 +19,18 @@ function formatDate(iso: string) {
   });
 }
 
-export default function InsightsPage() {
+export default async function InsightsPage() {
+  const [page, articles] = await Promise.all([getInsightsPage(), getArticles()]);
+
   return (
     <section className="pt-16 pb-24 sm:pt-24 sm:pb-28">
       <Container>
         <div className="max-w-2xl">
-          <Eyebrow>Insights</Eyebrow>
+          <Eyebrow>{page.eyebrow}</Eyebrow>
           <h1 className="mt-4 text-4xl font-medium tracking-tight text-ink text-balance sm:text-5xl">
-            Practical thinking on websites, AI and delivery
+            {page.heading}
           </h1>
-          <p className="mt-6 text-lg leading-relaxed text-stone">
-            Useful articles, written plainly, for people who&apos;d rather get on
-            with running their business than decode jargon.
-          </p>
+          <p className="mt-6 text-lg leading-relaxed text-stone">{page.intro}</p>
         </div>
 
         <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">

@@ -6,16 +6,22 @@ import Link from "next/link";
 import { Container } from "./Container";
 import { Wordmark } from "@/components/ui/Wordmark";
 import { Button } from "@/components/ui/Button";
-import { primaryNav } from "@/lib/site-config";
 import { clsx } from "@/lib/clsx";
+import type { SiteSettingsData } from "@/sanity/fetch";
 
-// The wordmark already links home, so the header nav omits a redundant
-// "Home" entry — the footer nav follows the same convention.
-const headerNav = primaryNav.filter((item) => item.href !== "/");
-
-export function Header() {
+export function Header({ settings }: { settings: SiteSettingsData }) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+
+  // The wordmark already links home, so the header nav omits a redundant
+  // "Home" entry — the footer nav follows the same convention. Routing
+  // stays fixed in code; only the visible labels come from Sanity.
+  const headerNav = [
+    { href: "/services", label: settings.navServices },
+    { href: "/about", label: settings.navAbout },
+    { href: "/insights", label: settings.navInsights },
+    { href: "/contact", label: settings.navContact },
+  ];
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -35,7 +41,7 @@ export function Header() {
             return (
               <Link
                 key={item.href}
-                href={item.href}
+                href={item.href as never}
                 className={clsx(
                   "text-[15px] font-medium transition-colors",
                   isActive ? "text-white" : "text-mist hover:text-white"
@@ -50,7 +56,7 @@ export function Header() {
 
         <div className="hidden md:block">
           <Button href="/contact" variant="primary" className="px-5 py-2.5 text-sm">
-            Book a consultation
+            {settings.headerCtaLabel}
           </Button>
         </div>
 
@@ -82,7 +88,7 @@ export function Header() {
               return (
                 <Link
                   key={item.href}
-                  href={item.href}
+                  href={item.href as never}
                   onClick={() => setOpen(false)}
                   className={clsx(
                     "rounded-lg px-3 py-3 text-base font-medium transition-colors",
@@ -100,7 +106,7 @@ export function Header() {
               onClick={() => setOpen(false)}
               className="mt-3 min-h-[44px] w-full"
             >
-              Book a consultation
+              {settings.headerCtaLabel}
             </Button>
           </Container>
         </div>

@@ -1,7 +1,8 @@
 import { Container } from "@/components/layout/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { BentoGrid, BentoCard } from "@/components/ui/BentoGrid";
-import { services } from "@/lib/content/services";
+import type { Service } from "@/lib/content/services";
+import type { HomePageData } from "@/sanity/fetch";
 
 const icons: Record<string, React.ReactNode> = {
   websites: (
@@ -36,7 +37,7 @@ const icons: Record<string, React.ReactNode> = {
   ),
 };
 
-export function ServicesBento() {
+export function ServicesBento({ data, services }: { data: HomePageData; services: Service[] }) {
   const [websites, webApps, aiAutomation, technicalDelivery] = services;
 
   return (
@@ -44,9 +45,9 @@ export function ServicesBento() {
       <Container>
         <div className="flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
           <SectionHeading
-            eyebrow="What we do"
-            title="Four ways we help businesses move forward"
-            description="Most engagements start with a website or a digital product. Many extend into automation or delivery support as the relationship grows."
+            eyebrow={data.servicesEyebrow}
+            title={data.servicesHeading}
+            description={data.servicesDescription}
           />
         </div>
 
