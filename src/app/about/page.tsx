@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Container } from "@/components/layout/Container";
 import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -41,16 +42,15 @@ export default function AboutPage() {
         <Container>
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
             <div className="reveal">
-              <div className="aspect-[4/5] w-full max-w-sm overflow-hidden rounded-2xl bg-ink/5 ring-1 ring-ink/10">
-                <div className="flex h-full w-full flex-col items-center justify-center gap-2 text-center text-stone">
-                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <circle cx="12" cy="8" r="3.5" stroke="currentColor" strokeWidth="1.4" />
-                    <path d="M4.5 19.5c1.5-3.5 4.5-5 7.5-5s6 1.5 7.5 5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
-                  </svg>
-                  <p className="px-8 text-sm">
-                    [PLACEHOLDER — professional founder photograph]
-                  </p>
-                </div>
+              <div className="group aspect-[4/5] w-full max-w-sm overflow-hidden rounded-2xl bg-ink/5 ring-1 ring-ink/10">
+                <Image
+                  src="/images/founder.jpg"
+                  alt="Founder, Elite Tech Delivery"
+                  width={1254}
+                  height={1254}
+                  className="h-full w-full object-cover grayscale transition-all duration-500 ease-out group-hover:grayscale-0"
+                  priority
+                />
               </div>
               <p className="mt-4 max-w-sm text-sm text-stone">
                 [PLACEHOLDER — Founder name], Founder, Elite Tech Delivery
@@ -114,7 +114,7 @@ export default function AboutPage() {
             </p>
           </div>
           <Button href="/contact" variant="primary" className="shrink-0">
-            Book a free consultation
+            Book a consultation
           </Button>
         </Container>
       </section>

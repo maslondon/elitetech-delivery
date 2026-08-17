@@ -73,7 +73,7 @@ export default async function ArticlePage({
               best way forward.
             </p>
             <Button href="/contact" variant="primary" className="mt-6">
-              Book a free consultation
+              Book a consultation
             </Button>
           </div>
         </div>

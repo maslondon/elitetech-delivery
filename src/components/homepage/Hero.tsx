@@ -22,7 +22,7 @@ export function Hero() {
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
             <Button href="/contact" variant="primary">
-              Book a free consultation
+              Book a consultation
             </Button>
             <Button href="/services" variant="secondary">
               View our services

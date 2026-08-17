@@ -16,7 +16,7 @@ export function FinalCta() {
             </p>
           </div>
           <Button href="/contact" variant="primary" className="shrink-0">
-            Book a free consultation
+            Book a consultation
           </Button>
         </div>
       </Container>
