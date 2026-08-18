@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { pageMetadata } from "@/lib/metadata";
 import { getServices, getServicesPage } from "@/sanity/fetch";
+import { serviceIcons } from "@/lib/service-icons";
 
 export const metadata = pageMetadata({
   title: "Services",
@@ -53,7 +54,15 @@ export default async function ServicesPage() {
           <Container>
             <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_1.2fr] lg:gap-16">
               <div>
-                <span className="text-sm font-medium text-bronze-dark">{`0${i + 1}`}</span>
+                <div className="flex items-center gap-4">
+                  <div
+                    className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-bronze/15 text-bronze-dark"
+                    aria-hidden="true"
+                  >
+                    {serviceIcons[service.slug]}
+                  </div>
+                  <span className="text-sm font-medium text-bronze-dark">{`0${i + 1}`}</span>
+                </div>
                 <h2 className="mt-3 text-3xl font-medium tracking-tight text-ink text-balance sm:text-4xl">
                   {service.title}
                 </h2>
