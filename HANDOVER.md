@@ -29,6 +29,24 @@ npm run dev
 Visit `http://localhost:3000`. `npm run build` produces a production build;
 `npm run lint` runs ESLint (both currently pass clean).
 
+## Automated smoke test
+
+`npm run test:smoke` (Playwright) visits every page and checks three things
+a plain "does it return 200" check misses: every image actually decodes
+(catches silent image failures like a misconfigured external image
+domain), there are no console/JS errors, and an unknown URL genuinely 404s
+rather than silently succeeding. Takes about 5 seconds.
+
+```bash
+npm run test:smoke                                            # localhost:3000
+BASE_URL=https://elitetech-delivery.vercel.app npm run test:smoke   # production
+```
+
+Worth running after any deploy, especially one touching images, external
+data (Sanity), or navigation — this is exactly the kind of check that
+would have caught the founder-photo issue when Sanity's image domain
+wasn't yet allowed in `next.config.ts`, before a human had to spot it.
+
 ## Deployment
 
 **Recommended: Vercel.** It's built by the Next.js team, the free tier
