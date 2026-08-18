@@ -5,7 +5,8 @@
       "name": "elitetech-dev",
       "runtimeExecutable": "/Users/marcschneider/.nvm/versions/node/v24.19.0/bin/node",
       "runtimeArgs": ["/Users/marcschneider/Desktop/Desktop - Marc’s Laptop/Marcs Folder/EliteTech Delivery Claude Code v1/scripts/dev.mjs"],
-      "port": 3000
+      "port": 3000,
+      "autoPort": true
     }
   ]
 }
