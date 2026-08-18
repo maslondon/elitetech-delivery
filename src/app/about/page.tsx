@@ -28,6 +28,17 @@ export default async function AboutPage() {
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-stone">{page.intro}</p>
           </div>
+
+          <div className="group mt-14 aspect-[16/7] w-full overflow-hidden rounded-2xl bg-ink/5 ring-1 ring-ink/10">
+            <Image
+              src="/images/about-office.jpg"
+              alt="A small team of three collaborating around a table with laptops"
+              width={2000}
+              height={875}
+              className="h-full w-full object-cover grayscale transition-all duration-500 ease-out group-hover:grayscale-0"
+              priority
+            />
+          </div>
         </Container>
       </section>
 
@@ -60,7 +71,7 @@ export default async function AboutPage() {
 
               <div className="mt-10 flex items-center gap-3">
                 <div
-                  className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-bronze/15 text-bronze-dark"
+                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-bronze/15 text-bronze-dark"
                   aria-hidden="true"
                 >
                   {briefcaseIcon}
@@ -78,20 +89,6 @@ export default async function AboutPage() {
                 ))}
               </ul>
             </div>
-          </div>
-        </Container>
-      </section>
-
-      <section className="border-t border-ink/10 py-16 sm:py-20">
-        <Container>
-          <div className="group aspect-[16/7] w-full overflow-hidden rounded-2xl bg-ink/5 ring-1 ring-ink/10">
-            <Image
-              src="/images/about-office.jpg"
-              alt="A small team of three collaborating around a table with laptops"
-              width={2000}
-              height={875}
-              className="h-full w-full object-cover grayscale transition-all duration-500 ease-out group-hover:grayscale-0"
-            />
           </div>
         </Container>
       </section>

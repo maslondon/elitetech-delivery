@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Container } from "@/components/layout/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { pageMetadata } from "@/lib/metadata";
@@ -42,6 +43,17 @@ export default async function InsightsPage() {
           <p className="mt-6 text-lg leading-relaxed text-stone">{page.intro}</p>
         </div>
 
+        <div className="group mt-14 aspect-[16/7] w-full overflow-hidden rounded-2xl bg-ink/5 ring-1 ring-ink/10">
+          <Image
+            src="/images/insights-research.jpg"
+            alt="An overhead view of someone researching with a laptop and open book"
+            width={2000}
+            height={875}
+            className="h-full w-full object-cover grayscale transition-all duration-500 ease-out group-hover:grayscale-0"
+            priority
+          />
+        </div>
+
         <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {articles.map((article) => (
             <Link
@@ -50,7 +62,7 @@ export default async function InsightsPage() {
               className="group flex flex-col rounded-2xl bg-white/60 p-7 ring-1 ring-ink/10 transition-all duration-300 hover:-translate-y-0.5 hover:ring-bronze/50 hover:shadow-[0_12px_32px_-16px_rgba(11,11,12,0.25)]"
             >
               <div
-                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-bronze/15 text-bronze-dark"
+                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-bronze/15 text-bronze-dark"
                 aria-hidden="true"
               >
                 {articleIcon(article.slug)}

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Container } from "@/components/layout/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { ContactForm } from "./ContactForm";
@@ -29,7 +30,7 @@ export default async function ContactPage() {
             <div className="mt-10 space-y-5 text-[15px] text-ink/80">
               <div className="flex gap-3">
                 <div
-                  className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-bronze/15 text-bronze-dark"
+                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-bronze/15 text-bronze-dark"
                   aria-hidden="true"
                 >
                   {mailIcon}
@@ -45,7 +46,7 @@ export default async function ContactPage() {
               </div>
               <div className="flex gap-3">
                 <div
-                  className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-bronze/15 text-bronze-dark"
+                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-bronze/15 text-bronze-dark"
                   aria-hidden="true"
                 >
                   {clockIcon}
@@ -57,6 +58,16 @@ export default async function ContactPage() {
                   {page.responseTimeText}
                 </p>
               </div>
+            </div>
+
+            <div className="group mt-10 aspect-[4/3] w-full max-w-md overflow-hidden rounded-2xl bg-ink/5 ring-1 ring-ink/10">
+              <Image
+                src="/images/contact-typing.jpg"
+                alt="Close-up of someone typing on a laptop"
+                width={1200}
+                height={800}
+                className="h-full w-full object-cover grayscale transition-all duration-500 ease-out group-hover:grayscale-0"
+              />
             </div>
           </div>
 

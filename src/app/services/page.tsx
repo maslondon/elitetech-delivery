@@ -18,7 +18,7 @@ export default async function ServicesPage() {
 
   return (
     <>
-      <section className="pt-16 pb-14 sm:pt-24 sm:pb-16">
+      <section className="pt-16 pb-16 sm:pt-24 sm:pb-20">
         <Container>
           <div className="max-w-2xl">
             <Eyebrow>{page.eyebrow}</Eyebrow>
@@ -28,7 +28,7 @@ export default async function ServicesPage() {
             <p className="mt-6 text-lg leading-relaxed text-stone">{page.intro}</p>
           </div>
 
-          <nav aria-label="Jump to service" className="mt-10 flex flex-wrap gap-3">
+          <nav aria-label="Jump to service" className="mt-8 flex flex-wrap gap-3">
             {services.map((service) => (
               <a
                 key={service.slug}
@@ -68,7 +68,7 @@ export default async function ServicesPage() {
               <div>
                 <div className="flex items-center gap-4">
                   <div
-                    className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-bronze/15 text-bronze-dark"
+                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-bronze/15 text-bronze-dark"
                     aria-hidden="true"
                   >
                     {serviceIcons[service.slug]}
