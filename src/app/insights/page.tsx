@@ -3,6 +3,15 @@ import { Container } from "@/components/layout/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { pageMetadata } from "@/lib/metadata";
 import { getArticles, getInsightsPage } from "@/sanity/fetch";
+import { serviceIcons } from "@/lib/service-icons";
+import { documentIcon } from "@/lib/icons";
+
+function articleIcon(slug: string) {
+  if (slug.includes("website")) return serviceIcons.websites;
+  if (slug.includes("ai")) return serviceIcons["ai-automation"];
+  if (slug.includes("delivery")) return serviceIcons["technical-delivery"];
+  return documentIcon;
+}
 
 export const metadata = pageMetadata({
   title: "Insights",
@@ -40,7 +49,13 @@ export default async function InsightsPage() {
               href={`/insights/${article.slug}`}
               className="group flex flex-col rounded-2xl bg-white/60 p-7 ring-1 ring-ink/10 transition-all duration-300 hover:-translate-y-0.5 hover:ring-bronze/50 hover:shadow-[0_12px_32px_-16px_rgba(11,11,12,0.25)]"
             >
-              <p className="text-xs font-medium uppercase tracking-[0.15em] text-stone">
+              <div
+                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-bronze/15 text-bronze-dark"
+                aria-hidden="true"
+              >
+                {articleIcon(article.slug)}
+              </div>
+              <p className="mt-4 text-xs font-medium uppercase tracking-[0.15em] text-stone">
                 {formatDate(article.date)} · {article.readingTime}
               </p>
               <h2 className="mt-4 text-xl font-medium tracking-tight text-ink text-balance">

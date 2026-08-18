@@ -3,6 +3,7 @@ import { Eyebrow } from "@/components/ui/Eyebrow";
 import { ContactForm } from "./ContactForm";
 import { pageMetadata } from "@/lib/metadata";
 import { getContactPage, getSiteSettings } from "@/sanity/fetch";
+import { mailIcon, clockIcon } from "@/lib/icons";
 
 export const metadata = pageMetadata({
   title: "Contact",
@@ -25,21 +26,37 @@ export default async function ContactPage() {
             </h1>
             <p className="mt-6 max-w-md text-lg leading-relaxed text-stone">{page.intro}</p>
 
-            <div className="mt-10 space-y-4 text-[15px] text-ink/80">
-              <p>
-                <span className="block text-xs font-medium uppercase tracking-[0.15em] text-stone">
-                  {page.emailLabel}
-                </span>
-                <a href={`mailto:${settings.email}`} className="mt-1 inline-block text-bronze-dark hover:underline">
-                  {settings.email}
-                </a>
-              </p>
-              <p>
-                <span className="block text-xs font-medium uppercase tracking-[0.15em] text-stone">
-                  {page.responseTimeLabel}
-                </span>
-                {page.responseTimeText}
-              </p>
+            <div className="mt-10 space-y-5 text-[15px] text-ink/80">
+              <div className="flex gap-3">
+                <div
+                  className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-bronze/15 text-bronze-dark"
+                  aria-hidden="true"
+                >
+                  {mailIcon}
+                </div>
+                <p>
+                  <span className="block text-xs font-medium uppercase tracking-[0.15em] text-stone">
+                    {page.emailLabel}
+                  </span>
+                  <a href={`mailto:${settings.email}`} className="mt-1 inline-block text-bronze-dark hover:underline">
+                    {settings.email}
+                  </a>
+                </p>
+              </div>
+              <div className="flex gap-3">
+                <div
+                  className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-bronze/15 text-bronze-dark"
+                  aria-hidden="true"
+                >
+                  {clockIcon}
+                </div>
+                <p>
+                  <span className="block text-xs font-medium uppercase tracking-[0.15em] text-stone">
+                    {page.responseTimeLabel}
+                  </span>
+                  {page.responseTimeText}
+                </p>
+              </div>
             </div>
           </div>
 

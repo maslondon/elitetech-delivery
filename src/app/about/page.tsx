@@ -5,6 +5,7 @@ import { Eyebrow } from "@/components/ui/Eyebrow";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { pageMetadata } from "@/lib/metadata";
 import { getAboutPage } from "@/sanity/fetch";
+import { briefcaseIcon } from "@/lib/icons";
 
 export const metadata = pageMetadata({
   title: "About",
@@ -57,9 +58,17 @@ export default async function AboutPage() {
                 ))}
               </div>
 
-              <h3 className="mt-10 text-sm font-medium uppercase tracking-[0.15em] text-stone">
-                {page.experienceHeading}
-              </h3>
+              <div className="mt-10 flex items-center gap-3">
+                <div
+                  className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-bronze/15 text-bronze-dark"
+                  aria-hidden="true"
+                >
+                  {briefcaseIcon}
+                </div>
+                <h3 className="text-sm font-medium uppercase tracking-[0.15em] text-stone">
+                  {page.experienceHeading}
+                </h3>
+              </div>
               <ul className="mt-4 space-y-2.5">
                 {page.experienceAreas.map((item) => (
                   <li key={item} className="flex gap-2.5 text-[15px] leading-relaxed text-ink/80">
