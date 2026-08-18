@@ -13,21 +13,21 @@ export type Service = {
 export const services: Service[] = [
   {
     slug: "websites",
-    shortTitle: "Websites",
-    title: "Website Design & Development",
+    shortTitle: "Websites & Apps",
+    title: "Websites & Apps",
     cardDescription:
-      "New sites, redesigns and landing pages that load fast, read clearly and turn visitors into enquiries.",
+      "New sites, redesigns and lightweight functionality — built to load fast, read clearly and turn visitors into enquiries.",
     summary:
-      "Your website is usually the first real impression a prospective client forms of your business. It needs to load quickly, explain what you do without effort, and make it obvious what to do next.",
+      "Your website is usually the first real impression a prospective client forms of your business. Whether it's a straightforward brochure site or one with booking forms and light interactive features built in, it needs to load quickly, explain what you do without effort, and make it obvious what to do next.",
     problem:
       "Many small business websites are slow, dated, or built on templates that don't reflect the quality of the work behind them. Visitors bounce before they understand what's on offer, and enquiries never arrive.",
     provide: [
       "New site builds and full redesigns, from a handful of pages to larger content-led sites",
       "Responsive, mobile-first development with clean, semantic code",
+      "Light interactive features built in — forms, booking widgets, calculators — without a full separate product",
       "Conversion-focused layouts and clear calls to action",
       "SEO-friendly structure — sensible URLs, heading hierarchy and metadata from day one",
       "Performance optimisation for fast load times and strong Core Web Vitals",
-      "Website audits and ongoing improvements for existing sites",
     ],
     outcomes: [
       "A site that loads fast and works properly on every device",
@@ -39,28 +39,28 @@ export const services: Service[] = [
   },
   {
     slug: "web-applications",
-    shortTitle: "Web Applications",
-    title: "Web Applications & Digital Products",
+    shortTitle: "Digital Products",
+    title: "Digital Products",
     cardDescription:
-      "Custom portals, internal tools and booking systems built around how your business actually works.",
+      "Bespoke portals, internal tools and custom-built products, designed around how your business actually works.",
     summary:
-      "Sometimes a website isn't enough — you need something that does work for you: a portal, a booking system, an internal tool, or a lightweight product for your own customers.",
+      "Sometimes a website isn't enough — you need something built specifically for your business: a client portal, an internal tool, or a standalone product for your own customers.",
     problem:
       "Off-the-shelf software often forces a business to change how it works to fit the tool. Custom-built alternatives are frequently over-scoped, slow to ship, or built by teams more interested in the technology than the problem.",
     provide: [
-      "Custom web applications and client or staff portals",
+      "Bespoke client and staff portals",
       "Internal tools that remove manual, repetitive work",
-      "Booking systems and workflow applications built around your process",
-      "Lightweight SaaS products and prototypes",
+      "Custom booking and workflow systems built around your process",
+      "Lightweight SaaS products and standalone digital products",
       "MVPs designed to test an idea quickly before committing to a larger build",
     ],
     outcomes: [
-      "A tool that fits the way your business already operates",
+      "A product that fits the way your business already operates",
       "Less time lost to manual admin and spreadsheets",
       "A working product you can put in front of real users quickly",
       "A codebase built to be extended, not thrown away",
     ],
-    ctaLabel: "Discuss a web application",
+    ctaLabel: "Discuss a digital product",
   },
   {
     slug: "ai-automation",
