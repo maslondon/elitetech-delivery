@@ -46,7 +46,7 @@ export default async function AboutPage() {
         <Container>
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
             <div className="reveal">
-              <div className="group aspect-[4/5] w-full max-w-sm overflow-hidden rounded-2xl bg-ink/5 ring-1 ring-ink/10">
+              <div className="group aspect-[4/5] w-full max-w-xs overflow-hidden rounded-2xl bg-ink/5 ring-1 ring-ink/10">
                 {page.founderPhotoUrl && (
                   <Image
                     src={page.founderPhotoUrl}
@@ -58,7 +58,7 @@ export default async function AboutPage() {
                   />
                 )}
               </div>
-              <p className="mt-4 max-w-sm text-sm text-stone">{page.founderName}</p>
+              <p className="mt-4 max-w-xs text-sm text-stone">{page.founderName}</p>
             </div>
 
             <div className="reveal">
