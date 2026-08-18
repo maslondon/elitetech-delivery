@@ -16,23 +16,23 @@ export const services: Service[] = [
     shortTitle: "Websites & Apps",
     title: "Websites & Apps",
     cardDescription:
-      "New sites, redesigns and lightweight functionality — built to load fast, read clearly and turn visitors into enquiries.",
+      "New sites, redesigns and the lightweight interactive tools that go with them — built to load fast, read clearly and do exactly what visitors need.",
     summary:
-      "Your website is usually the first real impression a prospective client forms of your business. Whether it's a straightforward brochure site or one with booking forms and light interactive features built in, it needs to load quickly, explain what you do without effort, and make it obvious what to do next.",
+      "Most businesses need a strong website first — but increasingly, that's only half the job. A calculator, a configurator, a quote tool, a booking flow that does more than take a name and email: these still live inside a website, but they need to actually work, not just look right. This service covers both the core site and the lighter interactive tools that sit alongside it.",
     problem:
-      "Many small business websites are slow, dated, or built on templates that don't reflect the quality of the work behind them. Visitors bounce before they understand what's on offer, and enquiries never arrive.",
+      "Many small business websites are slow, dated, or built on templates that don't reflect the quality of the work behind them — and when a business needs something slightly more interactive, it's often bolted on badly, or skipped altogether because it feels like a bigger job than it should be.",
     provide: [
       "New site builds and full redesigns, from a handful of pages to larger content-led sites",
       "Responsive, mobile-first development with clean, semantic code",
-      "Light interactive features built in — forms, booking widgets, calculators — without a full separate product",
+      "Lightweight interactive tools — calculators, configurators, booking flows, quote tools",
       "Conversion-focused layouts and clear calls to action",
       "SEO-friendly structure — sensible URLs, heading hierarchy and metadata from day one",
       "Performance optimisation for fast load times and strong Core Web Vitals",
     ],
     outcomes: [
       "A site that loads fast and works properly on every device",
+      "Interactive features that actually work, not just look like they should",
       "Clearer messaging that helps visitors understand your offer quickly",
-      "A stronger foundation for organic search — without guaranteed ranking promises",
       "A site you can hand over to us for updates, or manage yourself",
     ],
     ctaLabel: "Talk about your website",
@@ -42,9 +42,9 @@ export const services: Service[] = [
     shortTitle: "Digital Products",
     title: "Digital Products",
     cardDescription:
-      "Bespoke portals, internal tools and custom-built products, designed around how your business actually works.",
+      "Bespoke portals, internal tools and standalone products, built specifically around how your business works — not bent to fit somebody else's software.",
     summary:
-      "Sometimes a website isn't enough — you need something built specifically for your business: a client portal, an internal tool, or a standalone product for your own customers.",
+      "Some problems need more than a website with extra features — they need something built specifically for your business: a client portal, an internal tool your team relies on daily, or a standalone product for your own customers. This is genuinely custom software, designed around your process rather than the other way round.",
     problem:
       "Off-the-shelf software often forces a business to change how it works to fit the tool. Custom-built alternatives are frequently over-scoped, slow to ship, or built by teams more interested in the technology than the problem.",
     provide: [
