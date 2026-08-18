@@ -46,14 +46,14 @@ export default async function AboutPage() {
         <Container>
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
             <div className="reveal">
-              <div className="group aspect-[4/5] w-full max-w-sm overflow-hidden rounded-2xl bg-ink/5 p-8 ring-1 ring-ink/10 sm:p-10">
+              <div className="group aspect-square w-full max-w-sm overflow-hidden rounded-2xl bg-ink/5 ring-1 ring-ink/10">
                 {page.founderPhotoUrl && (
                   <Image
                     src={page.founderPhotoUrl}
                     alt={page.founderName}
                     width={1254}
                     height={1254}
-                    className="h-full w-full object-contain grayscale transition-all duration-500 ease-out group-hover:grayscale-0"
+                    className="h-full w-full object-cover grayscale transition-all duration-500 ease-out group-hover:grayscale-0"
                     priority
                   />
                 )}
