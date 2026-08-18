@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Container } from "@/components/layout/Container";
 import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -38,6 +39,17 @@ export default async function ServicesPage() {
               </a>
             ))}
           </nav>
+
+          <div className="group mt-14 aspect-[16/7] w-full overflow-hidden rounded-2xl bg-ink/5 ring-1 ring-ink/10">
+            <Image
+              src="/images/services-collaboration.jpg"
+              alt="A man and woman working through a problem together at a laptop"
+              width={2000}
+              height={875}
+              className="h-full w-full object-cover grayscale transition-all duration-500 ease-out group-hover:grayscale-0"
+              priority
+            />
+          </div>
         </Container>
       </section>
 
