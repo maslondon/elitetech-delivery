@@ -127,27 +127,27 @@ async function run() {
     {
       id: "service-websites",
       slug: "websites",
-      shortTitle: "Websites",
-      title: "Website Design & Development",
+      shortTitle: "Websites & Apps",
+      title: "Websites & Apps",
       cardDescription:
-        "New sites, redesigns and landing pages that load fast, read clearly and turn visitors into enquiries.",
+        "The site that brings people to you, and the small tools on it that turn a visit into an enquiry — calculators, configurators, booking forms, quote tools.",
       summary:
-        "Your website is usually the first real impression a prospective client forms of your business. It needs to load quickly, explain what you do without effort, and make it obvious what to do next.",
+        "This is the public face of your business: the site people land on, judge you by in about five seconds, and either explore or leave. Sometimes that's a clean, fast, well-written website. Sometimes it's a website plus something people can actually use — a calculator, a configurator, a quote tool, a booking form that does more than collect a name and email. Either way, the job is the same: get the right people to understand what you do, trust you, and take the next step.",
       problem:
-        "Many small business websites are slow, dated, or built on templates that don't reflect the quality of the work behind them. Visitors bounce before they understand what's on offer, and enquiries never arrive.",
+        "Too many small business websites are slow, generic, and built on a template that doesn't reflect the quality of the work behind them. And the moment a business needs something interactive — a calculator, a live quote, a proper booking flow — it either gets bolted on badly, or skipped altogether because it feels like a bigger job than it should be.",
       provide: [
         "New site builds and full redesigns, from a handful of pages to larger content-led sites",
+        "Interactive tools built into the site itself — calculators, configurators, booking flows, quote tools",
         "Responsive, mobile-first development with clean, semantic code",
         "Conversion-focused layouts and clear calls to action",
         "SEO-friendly structure — sensible URLs, heading hierarchy and metadata from day one",
         "Performance optimisation for fast load times and strong Core Web Vitals",
-        "Website audits and ongoing improvements for existing sites",
       ],
       outcomes: [
         "A site that loads fast and works properly on every device",
-        "Clearer messaging that helps visitors understand your offer quickly",
-        "A stronger foundation for organic search — without guaranteed ranking promises",
-        "A site you can hand over to us for updates, or manage yourself",
+        "Interactive tools that actually help visitors, not just decorate the page",
+        "Messaging that gets your offer across in the first five seconds",
+        "A site you can hand to us for updates, or manage yourself",
       ],
       ctaLabel: "Talk about your website",
       orderRank: 1,
@@ -155,28 +155,28 @@ async function run() {
     {
       id: "service-web-applications",
       slug: "web-applications",
-      shortTitle: "Web Applications",
-      title: "Web Applications & Digital Products",
+      shortTitle: "Digital Products",
+      title: "Digital Products",
       cardDescription:
-        "Custom portals, internal tools and booking systems built around how your business actually works.",
+        "Software built specifically for your business — a portal your clients log into, a tool your team relies on daily, or a product you sell in its own right. Not a website with extra features bolted on.",
       summary:
-        "Sometimes a website isn't enough — you need something that does work for you: a portal, a booking system, an internal tool, or a lightweight product for your own customers.",
+        "Some things aren't really websites at all — they're software your business runs on. A client portal people log into again and again. An internal tool that replaces a spreadsheet three people fight over. A standalone product built for your own customers. These aren't about being found online; they're about doing a specific job well, for people who already know they need it. That's a different kind of build, with different priorities — and it's genuinely custom, designed around how your business actually works rather than how a piece of off-the-shelf software expects it to.",
       problem:
-        "Off-the-shelf software often forces a business to change how it works to fit the tool. Custom-built alternatives are frequently over-scoped, slow to ship, or built by teams more interested in the technology than the problem.",
+        "Off-the-shelf software forces a business to change how it works to fit the tool — and the workarounds pile up. The custom alternative often isn't much better: over-scoped, slow to ship, or built by a team more interested in the technology than the problem it's meant to solve. What's missing is something built for exactly what you need, sized to match, and shipped fast enough to be useful.",
       provide: [
-        "Custom web applications and client or staff portals",
-        "Internal tools that remove manual, repetitive work",
-        "Booking systems and workflow applications built around your process",
-        "Lightweight SaaS products and prototypes",
+        "Bespoke client and staff portals people log into and actually use",
+        "Internal tools that remove manual, repetitive admin",
+        "Workflow and process systems built around how your team really operates",
+        "Lightweight SaaS products and standalone digital products for your own customers",
         "MVPs designed to test an idea quickly before committing to a larger build",
       ],
       outcomes: [
-        "A tool that fits the way your business already operates",
-        "Less time lost to manual admin and spreadsheets",
+        "Software that fits how your business already works, not the other way round",
+        "Hours back each week that were going into manual admin and spreadsheets",
         "A working product you can put in front of real users quickly",
-        "A codebase built to be extended, not thrown away",
+        "A codebase built to be extended as the product grows, not thrown away",
       ],
-      ctaLabel: "Discuss a web application",
+      ctaLabel: "Discuss a digital product",
       orderRank: 2,
     },
     {
