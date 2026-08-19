@@ -1,5 +1,4 @@
 import { Hero } from "@/components/homepage/Hero";
-import { TrustSection } from "@/components/homepage/TrustSection";
 import { ServicesBento } from "@/components/homepage/ServicesBento";
 import { WhySection } from "@/components/homepage/WhySection";
 import { ProcessSection } from "@/components/homepage/ProcessSection";
@@ -12,7 +11,6 @@ export default async function HomePage() {
   return (
     <>
       <Hero data={homeData} />
-      <TrustSection data={homeData} />
       <ServicesBento data={homeData} services={services} />
       <WhySection data={homeData} />
       <ProcessSection data={homeData} />

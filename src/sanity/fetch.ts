@@ -82,9 +82,6 @@ export type HomePageData = {
   heroSubhead: string;
   heroPrimaryCta: string;
   heroSecondaryCta: string;
-  trustEyebrow: string;
-  trustHeading: string;
-  trustPoints: { title: string; body: string }[];
   servicesEyebrow: string;
   servicesHeading: string;
   servicesDescription: string;
@@ -107,22 +104,6 @@ const staticHomePage: HomePageData = {
     "Elite Tech Delivery helps businesses design, build and deliver modern digital solutions — from high-performance websites and custom web applications to practical AI solutions and technical delivery consultancy.",
   heroPrimaryCta: "Book a consultation",
   heroSecondaryCta: "View our services",
-  trustEyebrow: "Why it works",
-  trustHeading: "Experience where it matters. Modern technology where it helps.",
-  trustPoints: [
-    {
-      title: "Senior delivery experience",
-      body: "Years spent leading technology programmes and delivery teams inside complex organisations — brought to bear on every engagement, however small.",
-    },
-    {
-      title: "Modern development capability",
-      body: "Current frameworks, tooling and — where it genuinely helps — AI, used to build and ship faster without cutting corners.",
-    },
-    {
-      title: "One point of accountability",
-      body: "No handoffs between sales and delivery. The person who scopes the work is the person who delivers it.",
-    },
-  ],
   servicesEyebrow: "What we do",
   servicesHeading: "Four ways we help businesses move forward",
   servicesDescription:
@@ -130,12 +111,12 @@ const staticHomePage: HomePageData = {
   whyEyebrow: "Why Elite Tech Delivery",
   whyHeading: "Senior thinking, applied practically",
   whyReasons: [
-    { title: "Senior technology delivery experience", body: "Grounded in years of leading digital programmes, not a portfolio built entirely on small freelance jobs." },
-    { title: "Hands-on development capability", body: "Work is actually built, not just scoped and handed to a subcontractor." },
+    { title: "Senior delivery experience", body: "Years spent leading technology programmes and delivery teams inside complex organisations — not a portfolio built on small freelance jobs alone." },
+    { title: "Hands-on development capability", body: "Current frameworks and tooling, used to actually build the work — not just scope it and hand it to a subcontractor." },
+    { title: "One point of accountability", body: "No handoffs between sales and delivery. The person who scopes the work is the person who delivers it." },
     { title: "Practical, not buzzword-driven", body: "Plain explanations of what's being built and why, without technical theatre." },
     { title: "Focused on business outcomes", body: "Every recommendation is judged against the problem it solves for your business." },
     { title: "Flexible engagement", body: "One-off projects, ongoing support, or delivery consultancy alongside your existing team." },
-    { title: "Clear communication throughout", body: "Straightforward updates and honest timelines — no jargon, no surprises." },
   ],
   processEyebrow: "Working together",
   processHeading: "A straightforward process, start to finish",

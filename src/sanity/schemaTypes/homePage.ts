@@ -6,7 +6,6 @@ export const homePage = defineType({
   type: "document",
   groups: [
     { name: "hero", title: "Hero" },
-    { name: "trust", title: "Trust section" },
     { name: "services", title: "Services intro" },
     { name: "why", title: "Why us" },
     { name: "process", title: "Process" },
@@ -19,17 +18,6 @@ export const homePage = defineType({
     defineField({ name: "heroSubhead", title: "Supporting copy", type: "text", rows: 3, group: "hero" }),
     defineField({ name: "heroPrimaryCta", title: "Primary button text", type: "string", group: "hero" }),
     defineField({ name: "heroSecondaryCta", title: "Secondary button text", type: "string", group: "hero" }),
-
-    // Trust
-    defineField({ name: "trustEyebrow", title: "Eyebrow", type: "string", group: "trust" }),
-    defineField({ name: "trustHeading", title: "Heading", type: "string", group: "trust" }),
-    defineField({
-      name: "trustPoints",
-      title: "Points",
-      type: "array",
-      of: [{ type: "titledPoint" }],
-      group: "trust",
-    }),
 
     // Services intro (the bento cards themselves pull from Service documents)
     defineField({ name: "servicesEyebrow", title: "Eyebrow", type: "string", group: "services" }),
