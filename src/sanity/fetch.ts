@@ -101,13 +101,12 @@ const staticHomePage: HomePageData = {
   heroHeadline:
     "Websites, digital products and technology delivery that move your business forward",
   heroSubhead:
-    "Elite Tech Delivery helps businesses design, build and deliver modern digital solutions — from high-performance websites and custom web applications to practical AI solutions and technical delivery consultancy.",
+    "Design, build and delivery for websites, digital products, AI and technical delivery — done properly, without the agency overhead.",
   heroPrimaryCta: "Book a consultation",
   heroSecondaryCta: "View our services",
   servicesEyebrow: "What we do",
   servicesHeading: "Four ways we help businesses move forward",
-  servicesDescription:
-    "Most engagements start with a website or a digital product. Many extend into automation or delivery support as the relationship grows.",
+  servicesDescription: "Most relationships start with one of these and grow from there.",
   whyEyebrow: "Why Elite Tech Delivery",
   whyHeading: "Senior thinking, applied practically",
   whyReasons: [
