@@ -3,7 +3,9 @@ import Link from "next/link";
 import { Container } from "@/components/layout/Container";
 import { Button } from "@/components/ui/Button";
 import { ArticleBody } from "@/components/insights/ArticleBody";
+import { ShareButtons } from "@/components/insights/ShareButtons";
 import { pageMetadata } from "@/lib/metadata";
+import { siteConfig } from "@/lib/site-config";
 import { getArticles, getArticleBySlug } from "@/sanity/fetch";
 
 export async function generateStaticParams() {
@@ -65,7 +67,11 @@ export default async function ArticlePage({
             <ArticleBody blocks={article.body} />
           </div>
 
-          <div className="mt-16 rounded-2xl bg-white/60 p-8 ring-1 ring-ink/10 sm:p-10">
+          <div className="mt-12 border-t border-ink/10 pt-8">
+            <ShareButtons url={`${siteConfig.url}/insights/${article.slug}`} title={article.title} />
+          </div>
+
+          <div className="mt-10 rounded-2xl bg-white/60 p-8 ring-1 ring-ink/10 sm:p-10">
             <h2 className="text-xl font-medium tracking-tight text-ink">
               Have a project this connects to?
             </h2>

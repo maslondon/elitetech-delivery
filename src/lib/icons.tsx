@@ -119,6 +119,28 @@ export const targetIcon: ReactNode = (
   </svg>
 );
 
+export const linkedinIcon: ReactNode = (
+  <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+    <rect x="2.5" y="2.5" width="15" height="15" rx="2" stroke="currentColor" strokeWidth="1.4" />
+    <circle cx="6.5" cy="7" r="0.9" fill="currentColor" />
+    <path d="M6.5 9.5v5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+    <path d="M10 14.5v-3a2 2 0 0 1 4 0v3M10 14.5V9.5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
+export const xIcon: ReactNode = (
+  <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+    <path d="M4 4l12 12M16 4 4 16" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+  </svg>
+);
+
+export const linkIcon: ReactNode = (
+  <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+    <path d="M8.5 11.5a3 3 0 0 0 4.24 0l2-2a3 3 0 0 0-4.24-4.24l-1 1" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M11.5 8.5a3 3 0 0 0-4.24 0l-2 2a3 3 0 0 0 4.24 4.24l1-1" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
 export const slidersIcon: ReactNode = (
   <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
     <path d="M4 15V5M10 15V5M16 15V5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
