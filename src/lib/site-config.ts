@@ -1,15 +1,15 @@
 export const siteConfig = {
   name: "Elite Tech Delivery",
-  legalName: "Elite Tech Delivery Limited",
+  legalName: "Elitetech Delivery Limited",
   domain: "elitetechdelivery.co.uk",
   url: "https://www.elitetechdelivery.co.uk",
   description:
     "Elite Tech Delivery helps businesses design, build and deliver modern digital solutions — from high-performance websites and custom web applications to practical AI solutions and technical delivery consultancy.",
   email: "marc@elitetechdelivery.co.uk",
-  phone: "", // PLACEHOLDER: add a contact number if the business wants one published
+  phone: "07958 391 825",
   linkedin: "https://www.linkedin.com/in/schneidermarc", // Marc's personal profile, until a company page exists
-  companyNumber: "[PLACEHOLDER — Companies House registration number]",
-  registeredOffice: "[PLACEHOLDER — registered office address]",
+  companyNumber: "15808621",
+  registeredOffice: "Second Floor, Kirkland House, 11-15 Peterborough Road, Harrow, Middlesex, HA1 2AX",
 } as const;
 
 export type NavItem = {
