@@ -32,7 +32,7 @@ export default async function AboutPage() {
           <div className="group mt-8 aspect-[16/7] w-full overflow-hidden rounded-2xl bg-ink/5 ring-1 ring-ink/10">
             <Image
               src="/images/about-office.jpg"
-              alt="A man and woman working together, using a MacBook Air"
+              alt="A colleague presenting sales figures to a team gathered round a laptop in a meeting room"
               width={2000}
               height={875}
               className="h-full w-full object-cover grayscale transition-all duration-500 ease-out group-hover:grayscale-0"
