@@ -44,8 +44,8 @@ async function run() {
     _id: "siteSettings",
     _type: "siteSettings",
     email: "marc@elitetechdelivery.co.uk",
-    phone: "",
-    linkedin: "https://www.linkedin.com/company/elite-tech-delivery",
+    phone: "07958 391 825",
+    linkedin: "https://www.linkedin.com/in/schneidermarc",
     navServices: "Services",
     navAbout: "About",
     navInsights: "Insights",
@@ -63,7 +63,6 @@ async function run() {
       "Websites, web applications and technical delivery consultancy for businesses that want modern digital work done properly.",
     siteColumnLabel: "Site",
     contactColumnLabel: "Get in touch",
-    linkedinLabel: "LinkedIn",
   });
 
   // ---------- Homepage ----------

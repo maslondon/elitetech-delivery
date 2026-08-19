@@ -22,6 +22,9 @@ export type SiteSettingsData = {
   email: string;
   phone: string;
   linkedin: string;
+  x?: string;
+  facebook?: string;
+  instagram?: string;
   navServices: string;
   navAbout: string;
   navInsights: string;
@@ -300,14 +303,12 @@ export type FooterData = {
   tagline: string;
   siteColumnLabel: string;
   contactColumnLabel: string;
-  linkedinLabel: string;
 };
 
 const staticFooter: FooterData = {
   tagline: "Websites, web applications and technical delivery consultancy for businesses that want modern digital work done properly.",
   siteColumnLabel: "Site",
   contactColumnLabel: "Get in touch",
-  linkedinLabel: "LinkedIn",
 };
 
 export async function getFooter(): Promise<FooterData> {

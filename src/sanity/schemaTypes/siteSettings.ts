@@ -13,6 +13,9 @@ export const siteSettings = defineType({
     defineField({ name: "email", title: "Contact email", type: "string", group: "contact" }),
     defineField({ name: "phone", title: "Phone (leave blank to hide)", type: "string", group: "contact" }),
     defineField({ name: "linkedin", title: "LinkedIn URL", type: "url", group: "contact" }),
+    defineField({ name: "x", title: "X (Twitter) URL", type: "url", group: "contact" }),
+    defineField({ name: "facebook", title: "Facebook URL", type: "url", group: "contact" }),
+    defineField({ name: "instagram", title: "Instagram URL", type: "url", group: "contact" }),
 
     defineField({ name: "navServices", title: "\"Services\" label", type: "string", initialValue: "Services", group: "nav" }),
     defineField({ name: "navAbout", title: "\"About\" label", type: "string", initialValue: "About", group: "nav" }),

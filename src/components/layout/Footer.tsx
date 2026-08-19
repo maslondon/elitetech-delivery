@@ -3,7 +3,18 @@ import { Container } from "./Container";
 import { Wordmark } from "@/components/ui/Wordmark";
 import { siteConfig } from "@/lib/site-config";
 import { CookiePreferencesLink } from "@/components/CookiePreferencesLink";
+import { linkedinIcon, xIcon, facebookIcon, instagramIcon } from "@/lib/icons";
 import type { SiteSettingsData, FooterData } from "@/sanity/fetch";
+
+const socialIconClasses =
+  "flex h-9 w-9 items-center justify-center rounded-full text-ivory/70 ring-1 ring-ivory/20 transition-colors hover:text-bronze hover:ring-bronze";
+
+const socialLinks = [
+  { key: "linkedin", label: "LinkedIn", icon: linkedinIcon },
+  { key: "x", label: "X", icon: xIcon },
+  { key: "facebook", label: "Facebook", icon: facebookIcon },
+  { key: "instagram", label: "Instagram", icon: instagramIcon },
+] as const;
 
 const footerNavHrefs = [
   { href: "/services", labelKey: "navServices" },
@@ -25,19 +36,23 @@ export function Footer({ settings, footer }: { settings: SiteSettingsData; foote
           <div>
             <Wordmark variant="dark" />
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-ivory/70">{footer.tagline}</p>
-            {settings.linkedin && (
-              <a
-                href={settings.linkedin}
-                target="_blank"
-                rel="noreferrer noopener"
-                className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-ivory/80 hover:text-bronze"
-              >
-                {footer.linkedinLabel}
-                <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                  <path d="M3.5 8h9M8.5 3.5 13 8l-4.5 4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </a>
-            )}
+            <div className="mt-6 flex items-center gap-3">
+              {socialLinks.map(
+                (item) =>
+                  settings[item.key] && (
+                    <a
+                      key={item.key}
+                      href={settings[item.key]}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      aria-label={item.label}
+                      className={socialIconClasses}
+                    >
+                      {item.icon}
+                    </a>
+                  )
+              )}
+            </div>
           </div>
 
           <div>

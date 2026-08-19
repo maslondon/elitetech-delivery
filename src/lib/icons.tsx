@@ -128,9 +128,30 @@ export const linkedinIcon: ReactNode = (
   </svg>
 );
 
+export const facebookIcon: ReactNode = (
+  <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+    <circle cx="10" cy="10" r="7.5" stroke="currentColor" strokeWidth="1.4" />
+    <path
+      d="M11.8 6.5h-1.2c-.8 0-1.3.5-1.3 1.3V9H11l-.3 2h-1.4v6"
+      stroke="currentColor"
+      strokeWidth="1.4"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
 export const xIcon: ReactNode = (
   <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
     <path d="M4 4l12 12M16 4 4 16" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+  </svg>
+);
+
+export const instagramIcon: ReactNode = (
+  <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+    <rect x="2.5" y="2.5" width="15" height="15" rx="4" stroke="currentColor" strokeWidth="1.4" />
+    <circle cx="10" cy="10" r="3.7" stroke="currentColor" strokeWidth="1.4" />
+    <circle cx="14.2" cy="5.8" r="0.9" fill="currentColor" />
   </svg>
 );
 
