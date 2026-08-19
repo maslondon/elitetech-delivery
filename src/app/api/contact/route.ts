@@ -64,7 +64,7 @@ export async function POST(request: Request) {
   try {
     const resend = new Resend(apiKey);
     await resend.emails.send({
-      from: process.env.CONTACT_FROM_EMAIL || "Elite Tech Delivery <onboarding@resend.dev>",
+      from: process.env.CONTACT_FROM_EMAIL || `Elite Tech Delivery <${siteConfig.email}>`,
       to: siteConfig.email,
       replyTo: email,
       subject: `New enquiry from ${name}`,
