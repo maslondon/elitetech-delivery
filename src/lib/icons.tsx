@@ -14,6 +14,18 @@ export const clockIcon: ReactNode = (
   </svg>
 );
 
+export const phoneIcon: ReactNode = (
+  <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+    <path
+      d="M4.5 3h2.7l1 3.3-1.6 1.3a9.5 9.5 0 0 0 4.3 4.3l1.3-1.6 3.3 1v2.7c0 .8-.7 1.4-1.5 1.3-6-.6-10.3-4.9-10.9-10.9C3.1 3.7 3.7 3 4.5 3Z"
+      stroke="currentColor"
+      strokeWidth="1.4"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
 export const briefcaseIcon: ReactNode = (
   <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
     <rect x="2.5" y="6.5" width="15" height="10" rx="1.5" stroke="currentColor" strokeWidth="1.4" />

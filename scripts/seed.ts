@@ -450,6 +450,7 @@ async function run() {
     intro:
       "Whether you're planning a new website, exploring a digital product, looking at practical AI opportunities or need help delivering an existing technology initiative, get in touch.",
     emailLabel: "Email",
+    phoneLabel: "Phone / WhatsApp",
     responseTimeLabel: "Response time",
     responseTimeText: "We typically reply within one working day.",
     submitButtonLabel: "Send enquiry",

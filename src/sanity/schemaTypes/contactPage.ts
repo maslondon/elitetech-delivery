@@ -9,6 +9,7 @@ export const contactPage = defineType({
     defineField({ name: "heading", title: "Heading", type: "string" }),
     defineField({ name: "intro", title: "Intro copy", type: "text", rows: 3 }),
     defineField({ name: "emailLabel", title: "Email field label", type: "string", initialValue: "Email" }),
+    defineField({ name: "phoneLabel", title: "Phone field label", type: "string", initialValue: "Phone / WhatsApp" }),
     defineField({ name: "responseTimeLabel", title: "Response time label", type: "string", initialValue: "Response time" }),
     defineField({ name: "responseTimeText", title: "Response time text", type: "string" }),
     defineField({ name: "formHeading", title: "Form section text", type: "text", rows: 2 }),

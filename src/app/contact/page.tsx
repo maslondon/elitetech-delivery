@@ -4,7 +4,7 @@ import { Eyebrow } from "@/components/ui/Eyebrow";
 import { ContactForm } from "./ContactForm";
 import { pageMetadata } from "@/lib/metadata";
 import { getContactPage, getSiteSettings } from "@/sanity/fetch";
-import { mailIcon, clockIcon } from "@/lib/icons";
+import { mailIcon, clockIcon, phoneIcon } from "@/lib/icons";
 
 export const metadata = pageMetadata({
   title: "Contact",
@@ -44,6 +44,27 @@ export default async function ContactPage() {
                   </a>
                 </p>
               </div>
+              {settings.phone && (
+                <div className="flex gap-3">
+                  <div
+                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-bronze/15 text-bronze-dark"
+                    aria-hidden="true"
+                  >
+                    {phoneIcon}
+                  </div>
+                  <p>
+                    <span className="block text-xs font-medium uppercase tracking-[0.15em] text-stone">
+                      {page.phoneLabel}
+                    </span>
+                    <a
+                      href={`tel:${settings.phone.replace(/\s+/g, "")}`}
+                      className="mt-1 inline-block text-bronze-dark hover:underline"
+                    >
+                      {settings.phone}
+                    </a>
+                  </p>
+                </div>
+              )}
               <div className="flex gap-3">
                 <div
                   className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-bronze/15 text-bronze-dark"
