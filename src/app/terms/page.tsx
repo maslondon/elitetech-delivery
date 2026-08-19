@@ -49,16 +49,8 @@ export default async function TermsPage() {
             Terms &amp; Conditions
           </h1>
           <p className="mt-4 text-sm text-stone">
-            Last updated: [PLACEHOLDER — date of publication]
+            Last updated: 19 August 2026
           </p>
-
-          <div className="mt-6 rounded-xl bg-white/60 p-5 text-sm leading-relaxed text-stone ring-1 ring-ink/10">
-            This is standard, generic terms-of-use wording for a UK small
-            business website — it covers use of the site itself, not the
-            terms of any specific client engagement (those are agreed
-            separately, in writing, per project). Have it reviewed by a
-            solicitor before you rely on it.
-          </div>
 
           <p className={`${prose} mt-8`}>
             These terms and conditions govern your use of this website,

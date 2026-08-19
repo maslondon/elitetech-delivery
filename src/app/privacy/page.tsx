@@ -51,17 +51,8 @@ export default async function PrivacyPage() {
             Privacy Policy
           </h1>
           <p className="mt-4 text-sm text-stone">
-            Last updated: [PLACEHOLDER — date of publication]
+            Last updated: 19 August 2026
           </p>
-
-          <div className="mt-6 rounded-xl bg-white/60 p-5 text-sm leading-relaxed text-stone ring-1 ring-ink/10">
-            This is standard, generic policy wording suitable for a UK small
-            business website. It accurately reflects how this site currently
-            works, but it isn&apos;t a substitute for legal advice — have it
-            reviewed by a solicitor (or a template service such as Seq Legal
-            or Rocket Lawyer) before you rely on it, and fill in the
-            [PLACEHOLDER] details below once known.
-          </div>
 
           <p className={`${prose} mt-8`}>
             Elite Tech Delivery Limited (&quot;we&quot;, &quot;us&quot;,

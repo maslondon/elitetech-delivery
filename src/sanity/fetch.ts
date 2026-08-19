@@ -231,7 +231,7 @@ const staticAboutPage: AboutPageData = {
   backgroundEyebrow: "Background",
   backgroundHeading: "Substantial delivery experience, now applied to hands-on building",
   backgroundParagraphs: [
-    "Elite Tech Delivery is built on years of experience working across digital products, technology programmes and delivery teams within complex organisations [PLACEHOLDER — add named organisations here only where accurate, without implying their endorsement]. That experience spans working closely with product, engineering and business teams — understanding not just how technology gets built, but how it gets delivered well.",
+    "Elite Tech Delivery is built on years of experience working across digital products, technology programmes and delivery teams within complex organisations. That experience spans working closely with product, engineering and business teams — understanding not just how technology gets built, but how it gets delivered well.",
     "That combination of technology and delivery experience is now applied directly to client work: designing and building websites and digital products, incorporating AI where it genuinely helps, and providing technical delivery consultancy for organisations that need it.",
     "The aim is straightforward — bring senior-level judgement to work that's often left to generalists, without the overhead of a large agency.",
   ],
