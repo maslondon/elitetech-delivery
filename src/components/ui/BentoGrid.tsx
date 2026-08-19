@@ -33,7 +33,7 @@ export function BentoCard({ title, description, href, icon, accent = false, span
         span === "wide" && "lg:col-span-2",
         span === "full" && "lg:col-span-4",
         accent
-          ? "bg-bronze text-ink hover:bg-bronze-dark"
+          ? "bg-white/60 text-ink ring-1 ring-ink/10 hover:bg-bronze hover:ring-bronze"
           : "bg-white/60 text-ink ring-1 ring-ink/10 hover:ring-bronze/50 hover:-translate-y-0.5 hover:shadow-[0_12px_32px_-16px_rgba(11,11,12,0.25)]"
       )}
     >
@@ -41,9 +41,9 @@ export function BentoCard({ title, description, href, icon, accent = false, span
         {icon && (
           <div
             className={clsx(
-              "flex h-10 w-10 shrink-0 items-center justify-center rounded-full",
+              "flex h-10 w-10 shrink-0 items-center justify-center rounded-full transition-colors duration-300",
               horizontal ? "" : "mb-6",
-              accent ? "bg-ink text-bronze" : "bg-bronze/15 text-bronze-dark"
+              accent ? "bg-bronze/15 text-bronze-dark group-hover:bg-ink group-hover:text-bronze" : "bg-bronze/15 text-bronze-dark"
             )}
             aria-hidden="true"
           >
@@ -54,8 +54,8 @@ export function BentoCard({ title, description, href, icon, accent = false, span
           <h3 className="text-xl font-medium tracking-tight">{title}</h3>
           <p
             className={clsx(
-              "leading-relaxed",
-              accent ? "text-ink/80" : "text-stone",
+              "leading-relaxed transition-colors duration-300",
+              accent ? "text-stone group-hover:text-ink/80" : "text-stone",
               horizontal ? "mt-1.5 max-w-md text-[15px]" : "mt-3 text-[15px]"
             )}
           >
@@ -65,8 +65,8 @@ export function BentoCard({ title, description, href, icon, accent = false, span
       </div>
       <span
         className={clsx(
-          "inline-flex shrink-0 items-center gap-1.5 text-sm font-medium",
-          accent ? "text-ink" : "text-bronze-dark",
+          "inline-flex shrink-0 items-center gap-1.5 text-sm font-medium transition-colors duration-300",
+          accent ? "text-bronze-dark group-hover:text-ink" : "text-bronze-dark",
           horizontal ? "" : "mt-6"
         )}
       >
