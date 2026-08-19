@@ -19,7 +19,7 @@ export default async function AboutPage() {
 
   return (
     <>
-      <section className="pt-16 pb-16 sm:pt-24 sm:pb-20">
+      <section className="pt-16 pb-12 sm:pt-20 sm:pb-14">
         <Container>
           <div className="max-w-2xl">
             <Eyebrow>{page.eyebrow}</Eyebrow>
@@ -42,7 +42,7 @@ export default async function AboutPage() {
         </Container>
       </section>
 
-      <section className="border-t border-ink/10 py-16 sm:py-20">
+      <section className="border-t border-ink/10 py-12 sm:py-14">
         <Container>
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
             <div className="reveal">
@@ -93,7 +93,7 @@ export default async function AboutPage() {
         </Container>
       </section>
 
-      <section className="border-t border-ink/10 py-16 sm:py-20">
+      <section className="border-t border-ink/10 py-12 sm:py-14">
         <Container className="flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <h2 className="text-2xl font-medium tracking-tight text-ink sm:text-3xl">

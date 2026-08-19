@@ -7,7 +7,7 @@ const whyIcons = [medalIcon, codeIcon, handshakeIcon, chatIcon, targetIcon, slid
 
 export function WhySection({ data }: { data: HomePageData }) {
   return (
-    <section className="bg-ink py-20 text-ivory sm:py-28">
+    <section className="bg-ink py-14 text-ivory sm:py-20">
       <Container>
         <SectionHeading eyebrow={data.whyEyebrow} title={data.whyHeading} onDark />
 

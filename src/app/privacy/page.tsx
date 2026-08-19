@@ -20,7 +20,7 @@ export default async function PrivacyPage() {
   // Until then, the fully-linked default policy below is shown as-is.
   if (cms?.body?.length) {
     return (
-      <section className="pt-16 pb-24 sm:pt-24 sm:pb-28">
+      <section className="pt-16 pb-16 sm:pt-20 sm:pb-20">
         <Container>
           <div className="mx-auto max-w-2xl">
             <h1 className="text-4xl font-medium tracking-tight text-ink sm:text-5xl">
@@ -44,7 +44,7 @@ export default async function PrivacyPage() {
   }
 
   return (
-    <section className="pt-16 pb-24 sm:pt-24 sm:pb-28">
+    <section className="pt-16 pb-16 sm:pt-20 sm:pb-20">
       <Container>
         <div className="mx-auto max-w-2xl">
           <h1 className="text-4xl font-medium tracking-tight text-ink sm:text-5xl">

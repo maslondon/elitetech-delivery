@@ -18,7 +18,7 @@ export default async function ServicesPage() {
 
   return (
     <>
-      <section className="pt-16 pb-16 sm:pt-24 sm:pb-20">
+      <section className="pt-16 pb-12 sm:pt-20 sm:pb-14">
         <Container>
           <div className="max-w-2xl">
             <Eyebrow>{page.eyebrow}</Eyebrow>
@@ -59,8 +59,8 @@ export default async function ServicesPage() {
           id={service.slug}
           className={
             i % 2 === 1
-              ? "scroll-mt-24 border-t border-ink/10 bg-white/50 py-20 sm:py-24"
-              : "scroll-mt-24 border-t border-ink/10 py-20 sm:py-24"
+              ? "scroll-mt-24 border-t border-ink/10 bg-white/50 py-14 sm:py-16"
+              : "scroll-mt-24 border-t border-ink/10 py-14 sm:py-16"
           }
         >
           <Container>
@@ -126,7 +126,7 @@ export default async function ServicesPage() {
         </section>
       ))}
 
-      <section className="border-t border-ink/10 py-20 sm:py-24">
+      <section className="border-t border-ink/10 py-14 sm:py-16">
         <Container className="flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <h2 className="text-2xl font-medium tracking-tight text-ink sm:text-3xl">

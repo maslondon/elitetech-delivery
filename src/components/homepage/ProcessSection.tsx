@@ -7,7 +7,7 @@ const processIcons = [searchIcon, buildIcon, rocketIcon];
 
 export function ProcessSection({ data }: { data: HomePageData }) {
   return (
-    <section className="border-t border-ink/10 py-20 sm:py-28">
+    <section className="border-t border-ink/10 py-14 sm:py-20">
       <Container>
         <SectionHeading eyebrow={data.processEyebrow} title={data.processHeading} />
 

@@ -17,7 +17,7 @@ export default async function ContactPage() {
   const [page, settings] = await Promise.all([getContactPage(), getSiteSettings()]);
 
   return (
-    <section className="pt-16 pb-24 sm:pt-24 sm:pb-28">
+    <section className="pt-16 pb-16 sm:pt-20 sm:pb-20">
       <Container>
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           <div>

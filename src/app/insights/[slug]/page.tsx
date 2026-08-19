@@ -47,7 +47,7 @@ export default async function ArticlePage({
   const otherArticles = allArticles.filter((a) => a.slug !== article.slug).slice(0, 2);
 
   return (
-    <article className="pt-16 pb-24 sm:pt-24 sm:pb-28">
+    <article className="pt-16 pb-16 sm:pt-20 sm:pb-20">
       <Container>
         <div className="mx-auto max-w-2xl">
           <Link href="/insights" className="text-sm font-medium text-bronze-dark hover:underline">

@@ -33,7 +33,7 @@ export default async function InsightsPage() {
   const [page, articles] = await Promise.all([getInsightsPage(), getArticles()]);
 
   return (
-    <section className="pt-16 pb-24 sm:pt-24 sm:pb-28">
+    <section className="pt-16 pb-16 sm:pt-20 sm:pb-20">
       <Container>
         <div className="max-w-2xl">
           <Eyebrow>{page.eyebrow}</Eyebrow>
