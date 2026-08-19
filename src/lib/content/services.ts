@@ -4,7 +4,6 @@ export type Service = {
   title: string;
   cardDescription: string;
   summary: string;
-  problem: string;
   provide: string[];
   outcomes: string[];
   ctaLabel: string;
@@ -19,8 +18,6 @@ export const services: Service[] = [
       "The site that brings people to you, and the small tools on it that turn a visit into an enquiry — calculators, configurators, booking forms, quote tools.",
     summary:
       "This is the public face of your business — the site people land on, judge you by in five seconds, and either explore or leave. Sometimes that's a clean, fast website; sometimes it's a website plus something people can actually use, like a calculator or booking tool.",
-    problem:
-      "Too many small business websites are slow, generic, and built on a template that doesn't reflect the quality of the work behind them. And the moment a business needs something interactive — a calculator, a live quote, a proper booking flow — it either gets bolted on badly, or skipped altogether because it feels like a bigger job than it should be.",
     provide: [
       "New site builds and full redesigns, from a handful of pages to larger content-led sites",
       "Interactive tools built into the site itself — calculators, configurators, booking flows, quote tools",
@@ -43,8 +40,6 @@ export const services: Service[] = [
       "Software built specifically for your business — a portal your clients log into, a tool your team relies on daily, or a product you sell in its own right. Not a website with extra features bolted on.",
     summary:
       "Some things aren't really websites at all — they're software your business runs on: a client portal, an internal tool, a standalone product for your own customers. This is genuinely custom software, built around how your business works rather than the other way round.",
-    problem:
-      "Off-the-shelf software forces a business to change how it works to fit the tool — and the workarounds pile up. The custom alternative often isn't much better: over-scoped, slow to ship, or built by a team more interested in the technology than the problem it's meant to solve. What's missing is something built for exactly what you need, sized to match, and shipped fast enough to be useful.",
     provide: [
       "Bespoke client and staff portals people log into and actually use",
       "Internal tools that remove manual, repetitive admin",
@@ -67,8 +62,6 @@ export const services: Service[] = [
       "Practical AI-assisted workflows and automation that remove repetitive work — without the hype.",
     summary:
       "AI is a genuinely useful capability when it's applied to a specific, well-understood problem. It's less useful as a headline feature bolted onto something that didn't need it.",
-    problem:
-      "Many businesses know AI could help somewhere but aren't sure where, and are wary of consultants who lead with buzzwords rather than outcomes. Meanwhile useful, unglamorous automation — the kind that saves hours every week — often goes unbuilt.",
     provide: [
       "AI-assisted workflows for content, research and internal processes",
       "Business process automation that removes repetitive manual work",
@@ -91,8 +84,6 @@ export const services: Service[] = [
       "Senior delivery support for teams and programmes that need to move with more clarity and pace.",
     summary:
       "Good technology often struggles for the same reasons: unclear ownership, delivery that isn't structured to reduce risk, and teams that aren't set up to collaborate well. This is where experienced delivery leadership makes the difference.",
-    problem:
-      "Technology programmes stall when delivery lacks structure, stakeholders aren't aligned, or teams haven't been given the support to work effectively together. Adding more process rarely fixes this — the right delivery leadership usually does.",
     provide: [
       "Technical delivery management for projects and programmes",
       "Agile delivery support, tailored to how your teams actually work",

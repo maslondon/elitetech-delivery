@@ -90,11 +90,6 @@ export default async function ServicesPage() {
               <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
                 <div>
                   <h3 className="text-sm font-medium uppercase tracking-[0.15em] text-stone">
-                    The problem
-                  </h3>
-                  <p className="mt-3 text-[15px] leading-relaxed text-ink/80">{service.problem}</p>
-
-                  <h3 className="mt-8 text-sm font-medium uppercase tracking-[0.15em] text-stone">
                     What we provide
                   </h3>
                   <ul className="mt-3 space-y-2.5">
