@@ -32,8 +32,8 @@ export function Hero({ data }: { data: HomePageData }) {
             <Image
               src="/images/hero-team.jpg"
               alt="A team presenting and working together in a bright modern office"
-              width={2000}
-              height={2500}
+              width={1640}
+              height={2998}
               className="h-full w-full object-cover grayscale transition-all duration-500 ease-out group-hover:grayscale-0"
               priority
             />
