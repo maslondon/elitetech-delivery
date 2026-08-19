@@ -1,4 +1,6 @@
 import { NextResponse } from "next/server";
+import { Resend } from "resend";
+import { siteConfig } from "@/lib/site-config";
 
 type ContactPayload = {
   name: string;
@@ -10,6 +12,14 @@ type ContactPayload = {
 
 function isValidEmail(value: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+}
+
+function escapeHtml(value: string) {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
 }
 
 export async function POST(request: Request) {
@@ -34,10 +44,6 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Enter a valid email address." }, { status: 400 });
   }
 
-  // V1 behaviour: log the enquiry server-side so the form is functional for
-  // testing end to end. Before launch, replace this block with a real email
-  // provider integration (Resend is the recommended default — see the
-  // project handover notes) so enquiries actually reach an inbox.
   console.info("[contact] New enquiry received", {
     name,
     email,
@@ -46,6 +52,35 @@ export async function POST(request: Request) {
     message,
     receivedAt: new Date().toISOString(),
   });
+
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    console.warn(
+      "[contact] RESEND_API_KEY is not set — enquiry was logged above but no email was sent."
+    );
+    return NextResponse.json({ ok: true });
+  }
+
+  try {
+    const resend = new Resend(apiKey);
+    await resend.emails.send({
+      from: process.env.CONTACT_FROM_EMAIL || "Elite Tech Delivery <onboarding@resend.dev>",
+      to: siteConfig.email,
+      replyTo: email,
+      subject: `New enquiry from ${name}`,
+      html: `
+        <p><strong>Name:</strong> ${escapeHtml(name)}</p>
+        <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+        ${company ? `<p><strong>Company:</strong> ${escapeHtml(company)}</p>` : ""}
+        ${phone ? `<p><strong>Phone:</strong> ${escapeHtml(phone)}</p>` : ""}
+        <p><strong>Message:</strong></p>
+        <p>${escapeHtml(message).replace(/\n/g, "<br>")}</p>
+      `,
+    });
+  } catch (error) {
+    console.error("[contact] Failed to send notification email", error);
+    return NextResponse.json({ ok: true });
+  }
 
   return NextResponse.json({ ok: true });
 }

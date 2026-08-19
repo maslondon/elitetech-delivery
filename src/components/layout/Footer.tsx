@@ -76,9 +76,7 @@ export function Footer({ settings, footer }: { settings: SiteSettingsData; foote
                   {settings.email}
                 </a>
               </li>
-              <li className="text-ivory/50">
-                {settings.phone || "[PLACEHOLDER — phone number]"}
-              </li>
+              {settings.phone && <li className="text-ivory/50">{settings.phone}</li>}
             </ul>
           </div>
         </div>
