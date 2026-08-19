@@ -124,8 +124,8 @@ const staticHomePage: HomePageData = {
     { title: "Build / Improve", body: "We design, build or improve the solution, with regular visibility along the way." },
     { title: "Deliver", body: "We launch, measure what matters, and keep improving." },
   ],
-  ctaHeading: "Have a project in mind?",
-  ctaBody: "Tell us what you're trying to achieve and we'll explore the best way forward.",
+  ctaHeading: "Ready to move forward?",
+  ctaBody: "Book a no-pressure consultation and we'll help you figure out the right starting point.",
   ctaButtonLabel: "Book a consultation",
 };
 
@@ -222,8 +222,8 @@ const staticAboutPage: AboutPageData = {
     "Delivery team leadership and coaching",
     "Collaboration across product, engineering and business stakeholders",
   ],
-  ctaHeading: "Want to talk about your project?",
-  ctaBody: "We're happy to have an honest conversation about whether we're the right fit.",
+  ctaHeading: "Think we could be the right fit?",
+  ctaBody: "Have an honest, no-obligation conversation with us before committing to anything.",
   ctaButtonLabel: "Book a consultation",
 };
 

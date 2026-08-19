@@ -93,7 +93,7 @@ export function ContactForm({ email, submitButtonLabel, successHeading, successB
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="company" className={labelClasses}>
-            Company
+            Company <span className="text-stone">(optional)</span>
           </label>
           <input id="company" name="company" type="text" autoComplete="organization" className={`mt-2 ${inputClasses}`} />
         </div>

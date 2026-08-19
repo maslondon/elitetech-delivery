@@ -70,8 +70,7 @@ export default async function ArticlePage({
               Have a project this connects to?
             </h2>
             <p className="mt-2 text-stone">
-              Tell us what you&apos;re trying to achieve and we&apos;ll explore the
-              best way forward.
+              A quick conversation costs nothing — tell us what you&apos;re trying to achieve.
             </p>
             <Button href="/contact" variant="primary" className="mt-6">
               Book a consultation
