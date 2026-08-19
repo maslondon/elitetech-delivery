@@ -43,7 +43,7 @@ export default async function InsightsPage() {
           <p className="mt-6 text-lg leading-relaxed text-stone">{page.intro}</p>
         </div>
 
-        <div className="group mt-14 aspect-[16/7] w-full overflow-hidden rounded-2xl bg-ink/5 ring-1 ring-ink/10">
+        <div className="group mt-8 aspect-[16/7] w-full overflow-hidden rounded-2xl bg-ink/5 ring-1 ring-ink/10">
           <Image
             src="/images/insights-research.jpg"
             alt="An overhead view of someone researching with a laptop and open book"

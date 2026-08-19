@@ -28,7 +28,7 @@ export default async function ServicesPage() {
             <p className="mt-6 text-lg leading-relaxed text-stone">{page.intro}</p>
           </div>
 
-          <nav aria-label="Jump to service" className="mt-8 flex flex-wrap gap-3">
+          <nav aria-label="Jump to service" className="mt-6 flex flex-wrap gap-3">
             {services.map((service) => (
               <a
                 key={service.slug}
@@ -40,7 +40,7 @@ export default async function ServicesPage() {
             ))}
           </nav>
 
-          <div className="group mt-14 aspect-[16/7] w-full overflow-hidden rounded-2xl bg-ink/5 ring-1 ring-ink/10">
+          <div className="group mt-8 aspect-[16/7] w-full overflow-hidden rounded-2xl bg-ink/5 ring-1 ring-ink/10">
             <Image
               src="/images/services-collaboration.jpg"
               alt="A man and woman working through a problem together at a laptop"
