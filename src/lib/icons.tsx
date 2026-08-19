@@ -40,3 +40,90 @@ export const documentIcon: ReactNode = (
     <path d="M8 9h4M8 12h4" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
   </svg>
 );
+
+export const searchIcon: ReactNode = (
+  <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+    <circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" strokeWidth="1.4" />
+    <path d="M16.5 16.5 13 13" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+  </svg>
+);
+
+export const buildIcon: ReactNode = (
+  <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+    <path
+      d="M12 3.5 16.5 8l-2 2-4.5-4.5 2-2Z M9.5 6.5 3.8 12.2a1.8 1.8 0 0 0 0 2.5l1.5 1.5a1.8 1.8 0 0 0 2.5 0L13.5 10.5"
+      stroke="currentColor"
+      strokeWidth="1.4"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path d="M4 16.5 3 17.5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+  </svg>
+);
+
+export const rocketIcon: ReactNode = (
+  <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+    <path
+      d="M10 2.5c2.5 1.2 4 3.7 4 7.5-1.4.6-2.6.6-4 0-1.4.6-2.6.6-4 0 0-3.8 1.5-6.3 4-7.5Z"
+      stroke="currentColor"
+      strokeWidth="1.4"
+      strokeLinejoin="round"
+    />
+    <circle cx="10" cy="8" r="1.3" stroke="currentColor" strokeWidth="1.2" />
+    <path d="M7 12.5 5 17l3.5-2M13 12.5l2 4.5-3.5-2" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
+export const medalIcon: ReactNode = (
+  <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+    <circle cx="10" cy="12" r="4.5" stroke="currentColor" strokeWidth="1.4" />
+    <path d="M7.5 8 5.5 2.5h2.3L10 7l2.2-4.5h2.3L12.5 8" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M8.7 12.2 9.5 10.5l1.2 1.7 1.6-1.9" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
+export const codeIcon: ReactNode = (
+  <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+    <path d="M7 5.5 2.5 10 7 14.5M13 5.5 17.5 10 13 14.5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
+export const handshakeIcon: ReactNode = (
+  <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+    <path
+      d="M2.5 9 6 6l3 2 2-1.5 3 2 3.5-2.5M2.5 9l3 3.5 1.5-1M17.5 9l-3 3.5-2-1.5-1.5 1.2-2-1.7"
+      stroke="currentColor"
+      strokeWidth="1.4"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+export const chatIcon: ReactNode = (
+  <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+    <path
+      d="M3 4.5h14a1 1 0 0 1 1 1v7.5a1 1 0 0 1-1 1H8.5L5 17v-3H3a1 1 0 0 1-1-1V5.5a1 1 0 0 1 1-1Z"
+      stroke="currentColor"
+      strokeWidth="1.4"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+export const targetIcon: ReactNode = (
+  <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+    <circle cx="10" cy="10" r="7" stroke="currentColor" strokeWidth="1.4" />
+    <circle cx="10" cy="10" r="3.7" stroke="currentColor" strokeWidth="1.4" />
+    <circle cx="10" cy="10" r="0.9" fill="currentColor" />
+  </svg>
+);
+
+export const slidersIcon: ReactNode = (
+  <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+    <path d="M4 15V5M10 15V5M16 15V5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+    <circle cx="4" cy="10" r="1.6" fill="currentColor" />
+    <circle cx="10" cy="14" r="1.6" fill="currentColor" />
+    <circle cx="16" cy="7" r="1.6" fill="currentColor" />
+  </svg>
+);
