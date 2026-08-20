@@ -22,6 +22,26 @@ function escapeHtml(value: string) {
     .replace(/"/g, "&quot;");
 }
 
+/**
+ * Shown to the visitor whenever we could not hand the enquiry to Resend.
+ * Telling them to email directly matters more than looking polished: an
+ * enquiry the visitor thinks was sent, but never arrives, is a lost client.
+ */
+const DELIVERY_FAILED_MESSAGE =
+  `We couldn't send your enquiry just now. Please email ${siteConfig.email} directly and we'll come straight back to you.`;
+
+/**
+ * Logged at error level so a failed enquiry is still recoverable from the
+ * platform logs, rather than being lost entirely.
+ */
+function logUndeliveredEnquiry(reason: string, enquiry: Record<string, unknown>, detail?: unknown) {
+  console.error("[contact] ENQUIRY NOT DELIVERED —", reason, {
+    ...enquiry,
+    detail,
+    recoverFrom: "these logs — the visitor was told to email directly",
+  });
+}
+
 export async function POST(request: Request) {
   let payload: Partial<ContactPayload>;
 
@@ -44,26 +64,27 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Enter a valid email address." }, { status: 400 });
   }
 
-  console.info("[contact] New enquiry received", {
+  const enquiry = {
     name,
     email,
     company: company || undefined,
     phone: phone || undefined,
     message,
     receivedAt: new Date().toISOString(),
-  });
+  };
 
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {
-    console.warn(
-      "[contact] RESEND_API_KEY is not set — enquiry was logged above but no email was sent."
-    );
-    return NextResponse.json({ ok: true });
+    logUndeliveredEnquiry("RESEND_API_KEY is not set on this environment", enquiry);
+    return NextResponse.json({ error: DELIVERY_FAILED_MESSAGE }, { status: 500 });
   }
 
   try {
     const resend = new Resend(apiKey);
-    await resend.emails.send({
+    // Resend resolves with { data, error } rather than throwing on API
+    // errors, so the error field must be checked explicitly — a rejected
+    // key or exhausted quota would otherwise look like a successful send.
+    const { data, error } = await resend.emails.send({
       from: process.env.CONTACT_FROM_EMAIL || `Elite Tech Delivery <${siteConfig.email}>`,
       to: siteConfig.email,
       replyTo: email,
@@ -77,9 +98,16 @@ export async function POST(request: Request) {
         <p>${escapeHtml(message).replace(/\n/g, "<br>")}</p>
       `,
     });
-  } catch (error) {
-    console.error("[contact] Failed to send notification email", error);
-    return NextResponse.json({ ok: true });
+
+    if (error) {
+      logUndeliveredEnquiry("Resend rejected the send", enquiry, error);
+      return NextResponse.json({ error: DELIVERY_FAILED_MESSAGE }, { status: 502 });
+    }
+
+    console.info("[contact] Enquiry delivered", { emailId: data?.id, from: email });
+  } catch (thrown) {
+    logUndeliveredEnquiry("Could not reach Resend", enquiry, thrown);
+    return NextResponse.json({ error: DELIVERY_FAILED_MESSAGE }, { status: 502 });
   }
 
   return NextResponse.json({ ok: true });
