@@ -1,13 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
 import { siteConfig } from "@/lib/site-config";
-import { RevealInit } from "@/components/RevealInit";
-import { CookieConsent } from "@/components/CookieConsent";
-import { GoogleAnalytics } from "@/components/GoogleAnalytics";
-import { getSiteSettings, getFooter } from "@/sanity/fetch";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -48,30 +42,20 @@ const organizationJsonLd = {
   areaServed: "GB",
 };
 
-export default async function RootLayout({ children }: LayoutProps<"/">) {
-  const [settings, footer] = await Promise.all([getSiteSettings(), getFooter()]);
-
+/**
+ * Document shell only. The public site's header, footer and cookie banner
+ * live in the (site) route group so that /studio can render full-screen
+ * without them.
+ */
+export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en-GB" className={`${inter.variable} h-full`}>
-      <body className="flex min-h-full flex-col font-sans antialiased">
+      <body className="min-h-full font-sans antialiased">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
-        <a
-          href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-ink focus:px-4 focus:py-2 focus:text-sm focus:text-ivory"
-        >
-          Skip to content
-        </a>
-        <Header settings={settings} />
-        <main id="main-content" className="flex-1">
-          {children}
-        </main>
-        <Footer settings={settings} footer={footer} />
-        <RevealInit />
-        <CookieConsent />
-        <GoogleAnalytics />
+        {children}
       </body>
     </html>
   );
