@@ -88,6 +88,7 @@ export default async function ContactPage() {
                 width={1200}
                 height={800}
                 className="h-full w-full object-cover grayscale transition-all duration-500 ease-out group-hover:grayscale-0"
+                priority
               />
             </div>
           </div>

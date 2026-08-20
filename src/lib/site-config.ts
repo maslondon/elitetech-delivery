@@ -4,7 +4,7 @@ export const siteConfig = {
   domain: "elitetechdelivery.co.uk",
   url: "https://www.elitetechdelivery.co.uk",
   description:
-    "Elite Tech Delivery helps businesses design, build and deliver modern digital solutions — from high-performance websites and custom web applications to practical AI solutions and technical delivery consultancy.",
+    "Elite Tech Delivery helps businesses design, build and deliver modern digital solutions — websites, web apps, AI and technical delivery consultancy.",
   email: "marc@elitetechdelivery.co.uk",
   phone: "07958 391 825",
   linkedin: "https://www.linkedin.com/in/schneidermarc", // Marc's personal profile, until a company page exists
