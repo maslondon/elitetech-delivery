@@ -28,7 +28,7 @@ export function Hero({ data }: { data: HomePageData }) {
             </div>
           </div>
 
-          <div className="group aspect-[4/5] w-full overflow-hidden rounded-2xl bg-ink/5 ring-1 ring-ink/10">
+          <div className="group aspect-[16/9] w-full overflow-hidden rounded-2xl bg-ink/5 ring-1 ring-ink/10">
             <Image
               src="/images/hero-team.jpg"
               alt="A mixed team of colleagues gathered around a laptop discussing work together"
