@@ -7,12 +7,12 @@ export function Hero({ data }: { data: HomePageData }) {
   return (
     <section className="overflow-hidden pt-16 pb-14 sm:pt-20 sm:pb-20">
       <Container>
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-start lg:gap-10">
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
           <div>
             <p className="text-sm font-medium uppercase tracking-[0.2em] text-bronze-dark">
               {data.heroEyebrow}
             </p>
-            <h1 className="mt-5 text-4xl font-medium tracking-tight text-ink text-balance sm:text-5xl lg:text-6xl">
+            <h1 className="mt-5 text-4xl font-medium tracking-tight text-ink text-balance sm:text-5xl">
               {data.heroHeadline}
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-stone">
@@ -28,7 +28,7 @@ export function Hero({ data }: { data: HomePageData }) {
             </div>
           </div>
 
-          <div className="group aspect-[4/3] w-full overflow-hidden rounded-2xl bg-ink/5 ring-1 ring-ink/10">
+          <div className="group aspect-[1848/1350] w-full overflow-hidden rounded-2xl bg-ink/5 ring-1 ring-ink/10">
             <Image
               src="/images/hero-team.jpg"
               alt="A mixed team of colleagues gathered around a laptop discussing work together"
