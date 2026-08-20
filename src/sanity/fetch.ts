@@ -104,7 +104,7 @@ const staticHomePage: HomePageData = {
   heroHeadline:
     "Websites, digital products and technology delivery that move your business forward",
   heroSubhead:
-    "Design, build and delivery for websites, digital products, AI and technical delivery — done properly, without the agency overhead.",
+    "Design, build and delivery for websites, digital products, AI and technical delivery — done properly, without the overhead of a large agency.",
   heroPrimaryCta: "Book a consultation",
   heroSecondaryCta: "View our services",
   servicesEyebrow: "What we do",
