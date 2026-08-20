@@ -7,7 +7,7 @@ export function Hero({ data }: { data: HomePageData }) {
   return (
     <section className="overflow-hidden pt-16 pb-14 sm:pt-20 sm:pb-20">
       <Container>
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-start lg:gap-10">
           <div>
             <p className="text-sm font-medium uppercase tracking-[0.2em] text-bronze-dark">
               {data.heroEyebrow}
