@@ -28,11 +28,11 @@ export function Hero({ data }: { data: HomePageData }) {
             </div>
           </div>
 
-          <div className="group aspect-[16/9] w-full overflow-hidden rounded-2xl bg-ink/5 ring-1 ring-ink/10">
+          <div className="group aspect-[4/3] w-full overflow-hidden rounded-2xl bg-ink/5 ring-1 ring-ink/10">
             <Image
               src="/images/hero-team.jpg"
               alt="A mixed team of colleagues gathered around a laptop discussing work together"
-              width={2400}
+              width={1848}
               height={1350}
               className="h-full w-full object-cover grayscale transition-all duration-500 ease-out group-hover:grayscale-0"
               priority
