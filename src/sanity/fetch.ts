@@ -102,7 +102,7 @@ export type HomePageData = {
 const staticHomePage: HomePageData = {
   heroEyebrow: "Digital delivery, done properly",
   heroHeadline:
-    "Websites, digital products and AI that move your business forward",
+    "Websites, apps, digital products and AI that move your business forward",
   heroSubhead:
     "From websites and apps to digital products, AI and automation, and technical delivery — senior expertise, without the overhead of a large agency.",
   heroPrimaryCta: "Book a consultation",
