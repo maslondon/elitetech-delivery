@@ -73,7 +73,7 @@ async function run() {
     heroHeadline:
       "Websites, apps, digital products and AI that move your business forward",
     heroSubhead:
-      "From websites and apps to digital products, AI and automation, and technical delivery — senior expertise, without the overhead of a large agency.",
+      "From websites and mobile apps to digital products, AI and automation, and technical delivery — senior expertise, without the overhead of a large agency.",
     heroPrimaryCta: "Book a consultation",
     heroSecondaryCta: "View our services",
     servicesEyebrow: "What we do",
@@ -109,17 +109,18 @@ async function run() {
       shortTitle: "Websites & Apps",
       title: "Websites & Apps",
       cardDescription:
-        "The site that brings people to you, and the small tools on it that turn a visit into an enquiry — calculators, configurators, booking forms, quote tools.",
+        "The site that brings people to you, the tools on it that turn a visit into an enquiry, and mobile apps where a phone app beats a browser.",
       summary:
-        "This is the public face of your business — the site people land on, judge you by in five seconds, and either explore or leave. Sometimes that's a clean, fast website; sometimes it's a website plus something people can actually use, like a calculator or booking tool.",
+        "This is the public face of your business — the site people land on, judge you by in five seconds, and either explore or leave. Sometimes that's a clean, fast website; sometimes it's a website plus something people can actually use, like a calculator or booking tool; and sometimes what you actually need is a mobile app.",
       provide: [
         "New site builds and full redesigns, from a handful of pages to larger content-led sites",
         "Interactive tools built into the site itself — calculators, configurators, booking flows, quote tools",
+        "Mobile apps for iOS and Android, where a phone app genuinely beats a mobile-friendly site",
         "Conversion-focused layouts and clear calls to action",
         "Performance and SEO built in from day one, not bolted on after",
       ],
       outcomes: [
-        "A site that loads fast and works properly on every device",
+        "A site — or app — that loads fast and works properly on every device",
         "Interactive tools that actually help visitors, not just decorate the page",
         "Messaging that gets your offer across in the first five seconds",
         "A site you can hand to us for updates, or manage yourself",
