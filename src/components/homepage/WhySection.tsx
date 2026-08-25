@@ -15,7 +15,7 @@ export function WhySection({ data }: { data: HomePageData }) {
           {data.whyReasons.map((reason, i) => (
             <div key={reason.title} className="reveal border-t border-ivory/15 pt-5">
               <div
-                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-ivory/10 text-accent"
+                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-ivory/10 text-bronze"
                 aria-hidden="true"
               >
                 {whyIcons[i]}

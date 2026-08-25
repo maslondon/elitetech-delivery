@@ -4,7 +4,7 @@ import { useState } from "react";
 import { linkedinIcon, xIcon, facebookIcon, mailIcon, linkIcon } from "@/lib/icons";
 
 const iconButtonClasses =
-  "flex h-9 w-9 items-center justify-center rounded-full text-ink ring-1 ring-ink/15 transition-colors hover:text-accent-dark hover:ring-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
+  "flex h-9 w-9 items-center justify-center rounded-full text-ink ring-1 ring-ink/15 transition-colors hover:text-bronze-dark hover:ring-bronze focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bronze";
 
 export function ShareButtons({ url, title }: { url: string; title: string }) {
   const [copied, setCopied] = useState(false);

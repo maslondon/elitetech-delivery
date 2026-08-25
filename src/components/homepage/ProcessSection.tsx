@@ -15,12 +15,12 @@ export function ProcessSection({ data }: { data: HomePageData }) {
           {data.processSteps.map((step, i) => (
             <li key={step.title} className="reveal" style={{ transitionDelay: `${i * 100}ms` }}>
               <div
-                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent-dark"
+                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-bronze/15 text-bronze-dark"
                 aria-hidden="true"
               >
                 {processIcons[i]}
               </div>
-              <span className="mt-3 block text-sm font-medium text-accent-dark">{`0${i + 1}`}</span>
+              <span className="mt-3 block text-sm font-medium text-bronze-dark">{`0${i + 1}`}</span>
               <h3 className="mt-1 text-xl font-medium tracking-tight text-ink">{step.title}</h3>
               <p className="mt-2 text-[15px] leading-relaxed text-stone">{step.body}</p>
             </li>

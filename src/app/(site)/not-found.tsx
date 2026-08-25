@@ -5,7 +5,7 @@ export default function NotFound() {
   return (
     <section className="flex min-h-[60vh] items-center pt-16 pb-24 sm:pt-24">
       <Container>
-        <p className="text-sm font-medium uppercase tracking-[0.2em] text-accent-dark">404</p>
+        <p className="text-sm font-medium uppercase tracking-[0.2em] text-bronze-dark">404</p>
         <h1 className="mt-4 text-4xl font-medium tracking-tight text-ink sm:text-5xl">
           Page not found
         </h1>

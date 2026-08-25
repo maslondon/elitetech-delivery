@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/Button";
 type Status = "idle" | "submitting" | "success" | "error";
 
 const inputClasses =
-  "w-full rounded-lg border border-ink/15 bg-white px-4 py-3 text-[15px] text-ink placeholder:text-stone/60 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/30";
+  "w-full rounded-lg border border-ink/15 bg-white px-4 py-3 text-[15px] text-ink placeholder:text-stone/60 focus:border-bronze focus:outline-none focus:ring-2 focus:ring-bronze/30";
 
 const labelClasses = "text-sm font-medium text-ink";
 
@@ -64,7 +64,7 @@ export function ContactForm({ email, submitButtonLabel, successHeading, successB
         <h2 className="text-xl font-medium tracking-tight text-ink">{successHeading}</h2>
         <p className="mt-3 text-[15px] leading-relaxed text-stone">
           {successBody}{" "}
-          <a href={`mailto:${email}`} className="text-accent-dark hover:underline">
+          <a href={`mailto:${email}`} className="text-bronze-dark hover:underline">
             {email}
           </a>
           .
@@ -78,13 +78,13 @@ export function ContactForm({ email, submitButtonLabel, successHeading, successB
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="name" className={labelClasses}>
-            Name <span className="text-accent-dark">*</span>
+            Name <span className="text-bronze-dark">*</span>
           </label>
           <input id="name" name="name" type="text" required autoComplete="name" className={`mt-2 ${inputClasses}`} />
         </div>
         <div>
           <label htmlFor="email" className={labelClasses}>
-            Email <span className="text-accent-dark">*</span>
+            Email <span className="text-bronze-dark">*</span>
           </label>
           <input id="email" name="email" type="email" required autoComplete="email" className={`mt-2 ${inputClasses}`} />
         </div>
@@ -107,7 +107,7 @@ export function ContactForm({ email, submitButtonLabel, successHeading, successB
 
       <div>
         <label htmlFor="message" className={labelClasses}>
-          What are you trying to achieve? <span className="text-accent-dark">*</span>
+          What are you trying to achieve? <span className="text-bronze-dark">*</span>
         </label>
         <textarea
           id="message"

@@ -69,7 +69,7 @@ export default async function PrivacyPage() {
             &amp; Wales (company number: {siteConfig.companyNumber}).
             Registered office: {siteConfig.registeredOffice}. You can
             contact us at{" "}
-            <a href={`mailto:${siteConfig.email}`} className="text-accent-dark hover:underline">
+            <a href={`mailto:${siteConfig.email}`} className="text-bronze-dark hover:underline">
               {siteConfig.email}
             </a>
             .
@@ -161,7 +161,7 @@ export default async function PrivacyPage() {
               href="https://policies.google.com/privacy"
               target="_blank"
               rel="noreferrer noopener"
-              className="text-accent-dark hover:underline"
+              className="text-bronze-dark hover:underline"
             >
               Google&apos;s Privacy Policy
             </a>{" "}
@@ -186,12 +186,12 @@ export default async function PrivacyPage() {
             deletion of your data, restrict or object to our processing of
             it, and request a copy of it in a portable format. To exercise
             any of these rights, contact us at{" "}
-            <a href={`mailto:${siteConfig.email}`} className="text-accent-dark hover:underline">
+            <a href={`mailto:${siteConfig.email}`} className="text-bronze-dark hover:underline">
               {siteConfig.email}
             </a>
             . You also have the right to complain to the Information
             Commissioner&apos;s Office (ICO) at{" "}
-            <a href="https://ico.org.uk" target="_blank" rel="noreferrer noopener" className="text-accent-dark hover:underline">
+            <a href="https://ico.org.uk" target="_blank" rel="noreferrer noopener" className="text-bronze-dark hover:underline">
               ico.org.uk
             </a>{" "}
             if you believe we have not handled your data properly.
@@ -213,7 +213,7 @@ export default async function PrivacyPage() {
           <p className={`${prose} mt-3`}>
             If you have any questions about this policy or how we handle
             your data, contact{" "}
-            <a href={`mailto:${siteConfig.email}`} className="text-accent-dark hover:underline">
+            <a href={`mailto:${siteConfig.email}`} className="text-bronze-dark hover:underline">
               {siteConfig.email}
             </a>
             .

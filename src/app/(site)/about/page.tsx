@@ -71,7 +71,7 @@ export default async function AboutPage() {
 
               <div className="mt-10 flex items-center gap-3">
                 <div
-                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent-dark"
+                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-bronze/15 text-bronze-dark"
                   aria-hidden="true"
                 >
                   {briefcaseIcon}
@@ -83,7 +83,7 @@ export default async function AboutPage() {
               <ul className="mt-4 space-y-2.5">
                 {page.experienceAreas.map((item) => (
                   <li key={item} className="flex gap-2.5 text-[15px] leading-relaxed text-ink/80">
-                    <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-accent" aria-hidden="true" />
+                    <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-bronze" aria-hidden="true" />
                     {item}
                   </li>
                 ))}

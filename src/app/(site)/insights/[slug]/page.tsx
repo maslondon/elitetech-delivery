@@ -52,7 +52,7 @@ export default async function ArticlePage({
     <article className="pt-16 pb-16 sm:pt-20 sm:pb-20">
       <Container>
         <div className="mx-auto max-w-2xl">
-          <Link href="/insights" className="text-sm font-medium text-accent-dark hover:underline">
+          <Link href="/insights" className="text-sm font-medium text-bronze-dark hover:underline">
             ← All insights
           </Link>
 
@@ -94,7 +94,7 @@ export default async function ArticlePage({
                 <Link
                   key={a.slug}
                   href={`/insights/${a.slug}`}
-                  className="group rounded-xl p-1 text-ink hover:text-accent-dark"
+                  className="group rounded-xl p-1 text-ink hover:text-bronze-dark"
                 >
                   <h3 className="font-medium text-balance">{a.title}</h3>
                   <p className="mt-1.5 text-sm text-stone">{a.excerpt}</p>

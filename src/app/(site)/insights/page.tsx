@@ -59,10 +59,10 @@ export default async function InsightsPage() {
             <Link
               key={article.slug}
               href={`/insights/${article.slug}`}
-              className="group flex flex-col rounded-2xl bg-white/60 p-7 ring-1 ring-ink/10 transition-all duration-300 hover:-translate-y-0.5 hover:ring-accent/50 hover:shadow-[0_12px_32px_-16px_rgba(11,11,12,0.25)]"
+              className="group flex flex-col rounded-2xl bg-white/60 p-7 ring-1 ring-ink/10 transition-all duration-300 hover:-translate-y-0.5 hover:ring-bronze/50 hover:shadow-[0_12px_32px_-16px_rgba(11,11,12,0.25)]"
             >
               <div
-                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent-dark"
+                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-bronze/15 text-bronze-dark"
                 aria-hidden="true"
               >
                 {articleIcon(article.slug)}
@@ -76,7 +76,7 @@ export default async function InsightsPage() {
               <p className="mt-3 flex-1 text-[15px] leading-relaxed text-stone">
                 {article.excerpt}
               </p>
-              <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-accent-dark">
+              <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-bronze-dark">
                 Read article
                 <svg
                   className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-1"

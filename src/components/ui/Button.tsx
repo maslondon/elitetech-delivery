@@ -5,20 +5,20 @@ import { clsx } from "@/lib/clsx";
 type Variant = "primary" | "secondary" | "ghost";
 
 const base =
-  "inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-[15px] font-medium transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent disabled:opacity-50 disabled:pointer-events-none";
+  "inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-[15px] font-medium transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bronze disabled:opacity-50 disabled:pointer-events-none";
 
 const variants: Record<Variant, string> = {
-  primary: "bg-accent text-ink hover:bg-accent-dark",
+  primary: "bg-bronze text-ink hover:bg-bronze-dark",
   secondary:
     "border border-ink/20 text-ink hover:border-ink hover:bg-ink hover:text-ivory",
-  ghost: "text-ink hover:text-accent-dark underline-offset-4 hover:underline",
+  ghost: "text-ink hover:text-bronze-dark underline-offset-4 hover:underline",
 };
 
 const variantsOnDark: Record<Variant, string> = {
-  primary: "bg-accent text-ink hover:bg-accent-dark",
+  primary: "bg-bronze text-ink hover:bg-bronze-dark",
   secondary:
     "border border-ivory/30 text-ivory hover:border-ivory hover:bg-ivory hover:text-ink",
-  ghost: "text-ivory hover:text-accent underline-offset-4 hover:underline",
+  ghost: "text-ivory hover:text-bronze underline-offset-4 hover:underline",
 };
 
 type ButtonAsLink = ComponentPropsWithoutRef<typeof Link> & {
