@@ -9,7 +9,7 @@ export function Hero({ data }: { data: HomePageData }) {
       <Container>
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
           <div>
-            <p className="text-sm font-medium uppercase tracking-[0.2em] text-bronze-dark">
+            <p className="text-sm font-medium uppercase tracking-[0.2em] text-accent-dark">
               {data.heroEyebrow}
             </p>
             <h1 className="mt-5 text-4xl font-medium tracking-tight text-ink text-balance sm:text-5xl">

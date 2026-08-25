@@ -33,8 +33,8 @@ export function BentoCard({ title, description, href, icon, accent = false, span
         span === "wide" && "lg:col-span-2",
         span === "full" && "lg:col-span-4",
         accent
-          ? "bg-white/60 text-ink ring-1 ring-ink/10 hover:bg-bronze hover:ring-bronze"
-          : "bg-white/60 text-ink ring-1 ring-ink/10 hover:ring-bronze/50 hover:-translate-y-0.5 hover:shadow-[0_12px_32px_-16px_rgba(11,11,12,0.25)]"
+          ? "bg-white/60 text-ink ring-1 ring-ink/10 hover:bg-accent hover:ring-accent"
+          : "bg-white/60 text-ink ring-1 ring-ink/10 hover:ring-accent/50 hover:-translate-y-0.5 hover:shadow-[0_12px_32px_-16px_rgba(11,11,12,0.25)]"
       )}
     >
       <div className={clsx(horizontal && "flex items-center gap-5")}>
@@ -43,7 +43,7 @@ export function BentoCard({ title, description, href, icon, accent = false, span
             className={clsx(
               "flex h-10 w-10 shrink-0 items-center justify-center rounded-full transition-colors duration-300",
               horizontal ? "" : "mb-6",
-              accent ? "bg-bronze/15 text-bronze-dark group-hover:bg-ink group-hover:text-bronze" : "bg-bronze/15 text-bronze-dark"
+              accent ? "bg-accent/15 text-accent-dark group-hover:bg-ink group-hover:text-accent" : "bg-accent/15 text-accent-dark"
             )}
             aria-hidden="true"
           >
@@ -66,7 +66,7 @@ export function BentoCard({ title, description, href, icon, accent = false, span
       <span
         className={clsx(
           "inline-flex shrink-0 items-center gap-1.5 text-sm font-medium transition-colors duration-300",
-          accent ? "text-bronze-dark group-hover:text-ink" : "text-bronze-dark",
+          accent ? "text-accent-dark group-hover:text-ink" : "text-accent-dark",
           horizontal ? "" : "mt-6"
         )}
       >

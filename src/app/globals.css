@@ -1,15 +1,19 @@
 @import "tailwindcss";
 
 @theme {
-  --color-ink: #0b0b0c;
-  --color-ivory: #f4f1ea;
-  --color-bronze: #b08d57;
-  --color-bronze-dark: #96754a;
-  --color-stone: #5f5e5a;
-  /* Lighter neutral used only for nav text on the ink header — #5f5e5a
-     (stone) only clears ~3:1 against ink, short of the 4.5:1 AA text
-     threshold, so this is the minimum lift needed to pass. */
-  --color-mist: #b0afa9;
+  --color-ink: #0e1116;
+  --color-ivory: #f6f8f8;
+  /* Named semantically rather than by hue, so the palette can change again
+     without the token names lying about what they hold. */
+  --color-accent: #2dd4bf;
+  /* Darkened accent for accent-coloured text on light backgrounds: the
+     bright teal only reaches 1.7:1 there, this clears AA at 6.6:1. */
+  --color-accent-dark: #0d6459;
+  --color-stone: #4e565c;
+  /* Nav text on the ink header, deliberately brighter than body text. The
+     previous warm grey passed AAA on paper but read washed out; this lifts
+     it from 8.95:1 to 11.79:1 and cools it to suit the teal. */
+  --color-mist: #c7cdd2;
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, sans-serif;
 
@@ -34,7 +38,7 @@ body {
 }
 
 ::selection {
-  background: var(--color-bronze);
+  background: var(--color-accent);
   color: var(--color-ink);
 }
 

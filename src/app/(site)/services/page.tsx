@@ -33,7 +33,7 @@ export default async function ServicesPage() {
               <a
                 key={service.slug}
                 href={`#${service.slug}`}
-                className="rounded-full border border-ink/15 px-4 py-2 text-sm font-medium text-ink hover:border-bronze hover:text-bronze-dark"
+                className="rounded-full border border-ink/15 px-4 py-2 text-sm font-medium text-ink hover:border-accent hover:text-accent-dark"
               >
                 {service.shortTitle}
               </a>
@@ -68,12 +68,12 @@ export default async function ServicesPage() {
               <div>
                 <div className="flex items-center gap-4">
                   <div
-                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-bronze/15 text-bronze-dark"
+                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent-dark"
                     aria-hidden="true"
                   >
                     {serviceIcons[service.slug]}
                   </div>
-                  <span className="text-sm font-medium text-bronze-dark">{`0${i + 1}`}</span>
+                  <span className="text-sm font-medium text-accent-dark">{`0${i + 1}`}</span>
                 </div>
                 <h2 className="mt-3 text-3xl font-medium tracking-tight text-ink text-balance sm:text-4xl">
                   {service.title}
@@ -95,7 +95,7 @@ export default async function ServicesPage() {
                   <ul className="mt-3 space-y-2.5">
                     {service.provide.map((item) => (
                       <li key={item} className="flex gap-2.5 text-[15px] leading-relaxed text-ink/80">
-                        <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-bronze" aria-hidden="true" />
+                        <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-accent" aria-hidden="true" />
                         {item}
                       </li>
                     ))}
@@ -109,7 +109,7 @@ export default async function ServicesPage() {
                   <ul className="mt-3 space-y-2.5">
                     {service.outcomes.map((item) => (
                       <li key={item} className="flex gap-2.5 text-[15px] leading-relaxed text-ink/80">
-                        <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-bronze" aria-hidden="true" />
+                        <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-accent" aria-hidden="true" />
                         {item}
                       </li>
                     ))}

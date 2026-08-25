@@ -13,7 +13,7 @@ type WordmarkProps = {
 
 /**
  * Two-line, left-aligned lockup. "ELITE TECH" carries the weight; "DELIVERY"
- * is smaller, wide-tracked and set in bronze to read as a descriptor rather
+ * is smaller, wide-tracked and set in accent to read as a descriptor rather
  * than a second name.
  */
 export function Wordmark({ variant = "light", className }: WordmarkProps) {
@@ -36,7 +36,7 @@ export function Wordmark({ variant = "light", className }: WordmarkProps) {
       </span>
       <span
         className={clsx(
-          "mt-1 text-[11px] sm:text-[12px] text-bronze",
+          "mt-1 text-[11px] sm:text-[12px] text-accent",
           variant === "header" ? "font-normal tracking-[4px]" : "font-medium tracking-[0.25em]"
         )}
       >

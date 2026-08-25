@@ -7,7 +7,7 @@ import { linkedinIcon, xIcon, facebookIcon, instagramIcon } from "@/lib/icons";
 import type { SiteSettingsData, FooterData } from "@/sanity/fetch";
 
 const socialIconClasses =
-  "flex h-9 w-9 items-center justify-center rounded-full text-ivory/70 ring-1 ring-ivory/20 transition-colors hover:text-bronze hover:ring-bronze";
+  "flex h-9 w-9 items-center justify-center rounded-full text-ivory/70 ring-1 ring-ivory/20 transition-colors hover:text-accent hover:ring-accent";
 
 const socialLinks = [
   { key: "linkedin", label: "LinkedIn", icon: linkedinIcon },
@@ -60,7 +60,7 @@ export function Footer({ settings, footer }: { settings: SiteSettingsData; foote
             <ul className="mt-5 space-y-3">
               {footerNavHrefs.map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href as never} className="text-sm text-ivory/80 hover:text-bronze">
+                  <Link href={item.href as never} className="text-sm text-ivory/80 hover:text-accent">
                     {settings[item.labelKey]}
                   </Link>
                 </li>
@@ -72,7 +72,7 @@ export function Footer({ settings, footer }: { settings: SiteSettingsData; foote
             <p className="text-xs font-medium uppercase tracking-[0.2em] text-ivory/50">{footer.contactColumnLabel}</p>
             <ul className="mt-5 space-y-3 text-sm text-ivory/80">
               <li>
-                <a href={`mailto:${settings.email}`} className="hover:text-bronze">
+                <a href={`mailto:${settings.email}`} className="hover:text-accent">
                   {settings.email}
                 </a>
               </li>
@@ -89,11 +89,11 @@ export function Footer({ settings, footer }: { settings: SiteSettingsData; foote
           </p>
           <div className="flex gap-6">
             {legalNavHrefs.map((item) => (
-              <Link key={item.href} href={item.href as never} className="hover:text-bronze">
+              <Link key={item.href} href={item.href as never} className="hover:text-accent">
                 {settings[item.labelKey]}
               </Link>
             ))}
-            <CookiePreferencesLink className="hover:text-bronze" />
+            <CookiePreferencesLink className="hover:text-accent" />
           </div>
         </div>
       </Container>

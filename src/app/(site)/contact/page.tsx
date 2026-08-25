@@ -30,7 +30,7 @@ export default async function ContactPage() {
             <div className="mt-10 space-y-5 text-[15px] text-ink/80">
               <div className="flex gap-3">
                 <div
-                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-bronze/15 text-bronze-dark"
+                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent-dark"
                   aria-hidden="true"
                 >
                   {mailIcon}
@@ -39,7 +39,7 @@ export default async function ContactPage() {
                   <span className="block text-xs font-medium uppercase tracking-[0.15em] text-stone">
                     {page.emailLabel}
                   </span>
-                  <a href={`mailto:${settings.email}`} className="mt-1 inline-block text-bronze-dark hover:underline">
+                  <a href={`mailto:${settings.email}`} className="mt-1 inline-block text-accent-dark hover:underline">
                     {settings.email}
                   </a>
                 </p>
@@ -47,7 +47,7 @@ export default async function ContactPage() {
               {settings.phone && (
                 <div className="flex gap-3">
                   <div
-                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-bronze/15 text-bronze-dark"
+                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent-dark"
                     aria-hidden="true"
                   >
                     {phoneIcon}
@@ -58,7 +58,7 @@ export default async function ContactPage() {
                     </span>
                     <a
                       href={`tel:${settings.phone.replace(/\s+/g, "")}`}
-                      className="mt-1 inline-block text-bronze-dark hover:underline"
+                      className="mt-1 inline-block text-accent-dark hover:underline"
                     >
                       {settings.phone}
                     </a>
@@ -67,7 +67,7 @@ export default async function ContactPage() {
               )}
               <div className="flex gap-3">
                 <div
-                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-bronze/15 text-bronze-dark"
+                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent-dark"
                   aria-hidden="true"
                 >
                   {clockIcon}

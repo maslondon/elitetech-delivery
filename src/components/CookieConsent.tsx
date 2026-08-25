@@ -44,7 +44,7 @@ export function CookieConsent() {
           We need tracking in place to understand how visitors use this
           site, using Google Analytics — but only if you say it&apos;s OK.
           No analytics cookies are set until you accept. See our{" "}
-          <Link href="/privacy" className="text-bronze hover:underline">
+          <Link href="/privacy" className="text-accent hover:underline">
             Privacy Policy
           </Link>{" "}
           for details.

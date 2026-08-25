@@ -132,7 +132,7 @@ export default async function TermsPage() {
           <h2 className={h2}>Contact us</h2>
           <p className={`${prose} mt-3`}>
             Questions about these terms can be sent to{" "}
-            <a href={`mailto:${siteConfig.email}`} className="text-bronze-dark hover:underline">
+            <a href={`mailto:${siteConfig.email}`} className="text-accent-dark hover:underline">
               {siteConfig.email}
             </a>
             .

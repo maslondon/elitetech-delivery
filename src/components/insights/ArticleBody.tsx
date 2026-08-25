@@ -14,7 +14,7 @@ const portableComponents: PortableTextComponents = {
   listItem: {
     bullet: ({ children }) => (
       <li className="flex gap-2.5 text-[17px] leading-relaxed text-ink/80">
-        <span className="mt-2.5 h-1 w-1 shrink-0 rounded-full bg-bronze" aria-hidden="true" />
+        <span className="mt-2.5 h-1 w-1 shrink-0 rounded-full bg-accent" aria-hidden="true" />
         <span>{children}</span>
       </li>
     ),
@@ -47,7 +47,7 @@ export function ArticleBody({ blocks }: { blocks: ContentBlock[] | Array<Record<
             <ul key={i} className="space-y-2.5">
               {block.items.map((item) => (
                 <li key={item} className="flex gap-2.5 text-[17px] leading-relaxed text-ink/80">
-                  <span className="mt-2.5 h-1 w-1 shrink-0 rounded-full bg-bronze" aria-hidden="true" />
+                  <span className="mt-2.5 h-1 w-1 shrink-0 rounded-full bg-accent" aria-hidden="true" />
                   {item}
                 </li>
               ))}
