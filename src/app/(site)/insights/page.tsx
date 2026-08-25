@@ -33,7 +33,7 @@ export default async function InsightsPage() {
   const [page, articles] = await Promise.all([getInsightsPage(), getArticles()]);
 
   return (
-    <section className="pt-16 pb-16 sm:pt-20 sm:pb-20">
+    <section className="pt-12 pb-12 sm:pt-14 sm:pb-14">
       <Container>
         <div className="max-w-2xl">
           <Eyebrow>{page.eyebrow}</Eyebrow>
@@ -54,7 +54,7 @@ export default async function InsightsPage() {
           />
         </div>
 
-        <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-9 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {articles.map((article) => (
             <Link
               key={article.slug}

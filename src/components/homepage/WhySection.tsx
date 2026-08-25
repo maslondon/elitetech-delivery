@@ -11,7 +11,7 @@ export function WhySection({ data }: { data: HomePageData }) {
       <Container>
         <SectionHeading eyebrow={data.whyEyebrow} title={data.whyHeading} onDark />
 
-        <div className="mt-14 grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
           {data.whyReasons.map((reason, i) => (
             <div key={reason.title} className="reveal border-t border-ivory/15 pt-5">
               <div

@@ -19,7 +19,7 @@ export default async function AboutPage() {
 
   return (
     <>
-      <section className="pt-16 pb-12 sm:pt-20 sm:pb-14">
+      <section className="pt-12 pb-9 sm:pt-14 sm:pb-11">
         <Container>
           <div className="max-w-2xl">
             <Eyebrow>{page.eyebrow}</Eyebrow>
@@ -42,9 +42,9 @@ export default async function AboutPage() {
         </Container>
       </section>
 
-      <section className="border-t border-ink/10 py-12 sm:py-14">
+      <section className="border-t border-ink/10 py-9 sm:py-11">
         <Container>
-          <div className="grid grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+          <div className="grid grid-cols-1 gap-9 lg:grid-cols-[0.9fr_1.1fr] lg:gap-9">
             <div className="reveal">
               <div className="group aspect-square w-full max-w-sm overflow-hidden rounded-2xl bg-ink/5 ring-1 ring-ink/10">
                 {page.founderPhotoUrl && (
@@ -69,7 +69,7 @@ export default async function AboutPage() {
                 ))}
               </div>
 
-              <div className="mt-10 flex items-center gap-3">
+              <div className="mt-8 flex items-center gap-3">
                 <div
                   className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-bronze/15 text-bronze-dark"
                   aria-hidden="true"
@@ -93,7 +93,7 @@ export default async function AboutPage() {
         </Container>
       </section>
 
-      <section className="border-t border-ink/10 py-12 sm:py-14">
+      <section className="border-t border-ink/10 py-9 sm:py-11">
         <Container className="flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <h2 className="text-2xl font-medium tracking-tight text-ink sm:text-3xl">

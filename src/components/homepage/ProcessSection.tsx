@@ -7,11 +7,11 @@ const processIcons = [searchIcon, buildIcon, rocketIcon];
 
 export function ProcessSection({ data }: { data: HomePageData }) {
   return (
-    <section className="border-t border-ink/10 py-14 sm:py-20">
+    <section className="border-t border-ink/10 py-10 sm:py-14">
       <Container>
         <SectionHeading eyebrow={data.processEyebrow} title={data.processHeading} />
 
-        <ol className="mt-14 grid grid-cols-1 gap-10 sm:grid-cols-3 sm:gap-8">
+        <ol className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-3 sm:gap-8">
           {data.processSteps.map((step, i) => (
             <li key={step.title} className="reveal" style={{ transitionDelay: `${i * 100}ms` }}>
               <div

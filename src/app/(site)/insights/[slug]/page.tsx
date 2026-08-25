@@ -49,7 +49,7 @@ export default async function ArticlePage({
   const otherArticles = allArticles.filter((a) => a.slug !== article.slug).slice(0, 2);
 
   return (
-    <article className="pt-16 pb-16 sm:pt-20 sm:pb-20">
+    <article className="pt-12 pb-12 sm:pt-14 sm:pb-14">
       <Container>
         <div className="mx-auto max-w-2xl">
           <Link href="/insights" className="text-sm font-medium text-bronze-dark hover:underline">
@@ -63,15 +63,15 @@ export default async function ArticlePage({
             {article.title}
           </h1>
 
-          <div className="mt-10">
+          <div className="mt-8">
             <ArticleBody blocks={article.body} />
           </div>
 
-          <div className="mt-12 border-t border-ink/10 pt-8">
+          <div className="mt-9 border-t border-ink/10 pt-8">
             <ShareButtons url={`${siteConfig.url}/insights/${article.slug}`} title={article.title} />
           </div>
 
-          <div className="mt-10 rounded-2xl bg-white/60 p-8 ring-1 ring-ink/10 sm:p-10">
+          <div className="mt-8 rounded-2xl bg-white/60 p-8 ring-1 ring-ink/10 sm:p-10">
             <h2 className="text-xl font-medium tracking-tight text-ink">
               Have a project this connects to?
             </h2>
@@ -85,7 +85,7 @@ export default async function ArticlePage({
         </div>
 
         {otherArticles.length > 0 && (
-          <div className="mx-auto mt-20 max-w-2xl border-t border-ink/10 pt-12">
+          <div className="mx-auto mt-8 max-w-2xl border-t border-ink/10 pt-12">
             <p className="text-sm font-medium uppercase tracking-[0.15em] text-stone">
               More insights
             </p>

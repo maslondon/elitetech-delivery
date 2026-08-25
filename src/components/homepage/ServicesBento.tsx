@@ -9,7 +9,7 @@ export function ServicesBento({ data, services }: { data: HomePageData; services
   const [websites, webApps, aiAutomation, technicalDelivery] = services;
 
   return (
-    <section className="border-t border-ink/10 py-14 sm:py-20">
+    <section className="border-t border-ink/10 py-10 sm:py-14">
       <Container>
         <div className="flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
           <SectionHeading
@@ -19,7 +19,7 @@ export function ServicesBento({ data, services }: { data: HomePageData; services
           />
         </div>
 
-        <div className="mt-12 reveal">
+        <div className="mt-9 reveal">
           <BentoGrid>
             <BentoCard
               title={websites.shortTitle}

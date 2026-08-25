@@ -17,9 +17,9 @@ export default async function ContactPage() {
   const [page, settings] = await Promise.all([getContactPage(), getSiteSettings()]);
 
   return (
-    <section className="pt-16 pb-16 sm:pt-20 sm:pb-20">
+    <section className="pt-12 pb-12 sm:pt-14 sm:pb-14">
       <Container>
-        <div className="grid grid-cols-1 gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           <div>
             <Eyebrow>{page.eyebrow}</Eyebrow>
             <h1 className="mt-4 text-4xl font-medium tracking-tight text-ink text-balance sm:text-5xl">
@@ -27,7 +27,7 @@ export default async function ContactPage() {
             </h1>
             <p className="mt-6 max-w-md text-lg leading-relaxed text-stone">{page.intro}</p>
 
-            <div className="mt-10 space-y-5 text-[15px] text-ink/80">
+            <div className="mt-8 space-y-5 text-[15px] text-ink/80">
               <div className="flex gap-3">
                 <div
                   className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-bronze/15 text-bronze-dark"
@@ -81,7 +81,7 @@ export default async function ContactPage() {
               </div>
             </div>
 
-            <div className="group mt-10 aspect-[4/3] w-full max-w-md overflow-hidden rounded-2xl bg-ink/5 ring-1 ring-ink/10">
+            <div className="group mt-8 aspect-[4/3] w-full max-w-md overflow-hidden rounded-2xl bg-ink/5 ring-1 ring-ink/10">
               <Image
                 src="/images/contact-typing.jpg"
                 alt="Close-up of someone typing on a laptop"

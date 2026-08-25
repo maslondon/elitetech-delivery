@@ -32,7 +32,7 @@ export function Footer({ settings, footer }: { settings: SiteSettingsData; foote
   return (
     <footer className="bg-ink text-ivory">
       <Container className="py-16">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-[1.2fr_1fr_1fr]">
+        <div className="grid grid-cols-1 gap-9 md:grid-cols-[1.2fr_1fr_1fr]">
           <div>
             <Wordmark variant="dark" />
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-ivory/70">{footer.tagline}</p>
@@ -81,7 +81,7 @@ export function Footer({ settings, footer }: { settings: SiteSettingsData; foote
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col gap-4 border-t border-ivory/10 pt-8 text-xs text-ivory/50 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-8 flex flex-col gap-4 border-t border-ivory/10 pt-8 text-xs text-ivory/50 sm:flex-row sm:items-center sm:justify-between">
           <p>
             © {new Date().getFullYear()} {siteConfig.legalName}. All rights reserved.
             {" "}Registered in England &amp; Wales, company no. {siteConfig.companyNumber}.

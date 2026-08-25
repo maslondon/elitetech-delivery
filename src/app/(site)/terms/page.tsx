@@ -11,14 +11,14 @@ export const metadata = pageMetadata({
 });
 
 const prose = "text-[17px] leading-[1.7] text-ink/80";
-const h2 = "mt-10 text-xl font-medium tracking-tight text-ink";
+const h2 = "mt-8 text-xl font-medium tracking-tight text-ink";
 
 export default async function TermsPage() {
   const cms = await getLegalPage("terms");
 
   if (cms?.body?.length) {
     return (
-      <section className="pt-16 pb-16 sm:pt-20 sm:pb-20">
+      <section className="pt-12 pb-12 sm:pt-14 sm:pb-14">
         <Container>
           <div className="mx-auto max-w-2xl">
             <h1 className="text-4xl font-medium tracking-tight text-ink sm:text-5xl">
@@ -42,7 +42,7 @@ export default async function TermsPage() {
   }
 
   return (
-    <section className="pt-16 pb-16 sm:pt-20 sm:pb-20">
+    <section className="pt-12 pb-12 sm:pt-14 sm:pb-14">
       <Container>
         <div className="mx-auto max-w-2xl">
           <h1 className="text-4xl font-medium tracking-tight text-ink sm:text-5xl">

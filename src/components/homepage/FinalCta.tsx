@@ -4,7 +4,7 @@ import type { HomePageData } from "@/sanity/fetch";
 
 export function FinalCta({ data }: { data: HomePageData }) {
   return (
-    <section className="border-t border-ink/10 py-14 sm:py-20">
+    <section className="border-t border-ink/10 py-10 sm:py-14">
       <Container>
         <div className="reveal flex flex-col items-start gap-8 rounded-3xl bg-white/60 p-10 ring-1 ring-ink/10 sm:p-14 lg:flex-row lg:items-center lg:justify-between">
           <div className="max-w-xl">

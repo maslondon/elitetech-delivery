@@ -5,9 +5,9 @@ import type { HomePageData } from "@/sanity/fetch";
 
 export function Hero({ data }: { data: HomePageData }) {
   return (
-    <section className="overflow-hidden pt-16 pb-14 sm:pt-20 sm:pb-20">
+    <section className="overflow-hidden pt-12 pb-10 sm:pt-14 sm:pb-14">
       <Container>
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
+        <div className="grid grid-cols-1 items-center gap-9 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8">
           <div>
             <p className="text-sm font-medium uppercase tracking-[0.2em] text-bronze-dark">
               {data.heroEyebrow}
@@ -18,7 +18,7 @@ export function Hero({ data }: { data: HomePageData }) {
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-stone">
               {data.heroSubhead}
             </p>
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
               <Button href="/contact" variant="primary">
                 {data.heroPrimaryCta}
               </Button>
