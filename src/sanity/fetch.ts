@@ -102,14 +102,14 @@ export type HomePageData = {
 const staticHomePage: HomePageData = {
   heroEyebrow: "Digital delivery, done properly",
   heroHeadline:
-    "Websites, digital products and technology delivery that move your business forward",
+    "Websites, digital products and AI that move your business forward",
   heroSubhead:
-    "Design, build and delivery for websites, digital products, AI and technical delivery — done properly, without the overhead of a large agency.",
+    "From websites and apps to digital products, AI and automation, and technical delivery — senior expertise, without the overhead of a large agency.",
   heroPrimaryCta: "Book a consultation",
   heroSecondaryCta: "View our services",
   servicesEyebrow: "What we do",
   servicesHeading: "Four ways we help businesses move forward",
-  servicesDescription: "Most relationships start with one of these and grow from there.",
+  servicesDescription: "Each one stands alone, or works alongside the others.",
   whyEyebrow: "Why Elite Tech Delivery",
   whyHeading: "Senior thinking, applied practically",
   whyReasons: [
