@@ -17,8 +17,8 @@ const socialLinks = [
 ] as const;
 
 const footerNavHrefs = [
-  { href: "/services", labelKey: "navServices" },
   { href: "/about", labelKey: "navAbout" },
+  { href: "/services", labelKey: "navServices" },
   { href: "/insights", labelKey: "navInsights" },
   { href: "/contact", labelKey: "navContact" },
 ] as const;

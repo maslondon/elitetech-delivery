@@ -17,8 +17,8 @@ export function Header({ settings }: { settings: SiteSettingsData }) {
   // "Home" entry — the footer nav follows the same convention. Routing
   // stays fixed in code; only the visible labels come from Sanity.
   const headerNav = [
-    { href: "/services", label: settings.navServices },
     { href: "/about", label: settings.navAbout },
+    { href: "/services", label: settings.navServices },
     { href: "/insights", label: settings.navInsights },
     { href: "/contact", label: settings.navContact },
   ];

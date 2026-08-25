@@ -19,15 +19,15 @@ export type NavItem = {
 
 export const primaryNav: NavItem[] = [
   { label: "Home", href: "/" },
-  { label: "Services", href: "/services" },
   { label: "About", href: "/about" },
+  { label: "Services", href: "/services" },
   { label: "Insights", href: "/insights" },
   { label: "Contact", href: "/contact" },
 ];
 
 export const footerNav: NavItem[] = [
-  { label: "Services", href: "/services" },
   { label: "About", href: "/about" },
+  { label: "Services", href: "/services" },
   { label: "Insights", href: "/insights" },
   { label: "Contact", href: "/contact" },
 ];
