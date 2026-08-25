@@ -3,8 +3,8 @@
 @theme {
   --color-ink: #0b0b0c;
   --color-ivory: #f4f1ea;
-  --color-bronze: #e8735a;
-  --color-bronze-dark: #c43a22;
+  --color-bronze: #f7685f;
+  --color-bronze-dark: #d42111;
   --color-stone: #5f5e5a;
   /* Lighter neutral used only for nav text on the ink header — #5f5e5a
      (stone) only clears ~3:1 against ink, short of the 4.5:1 AA text
