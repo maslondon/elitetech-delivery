@@ -44,9 +44,9 @@ export default async function AboutPage() {
 
       <section className="border-t border-ink/10 py-9 sm:py-11">
         <Container>
-          <div className="grid grid-cols-1 gap-9 lg:grid-cols-[0.9fr_1.1fr] lg:gap-9">
+          <div className="grid grid-cols-1 gap-9 lg:grid-cols-[0.6fr_1.4fr] lg:gap-9">
             <div className="reveal">
-              <div className="group aspect-square w-full max-w-sm overflow-hidden rounded-2xl bg-ink/5 ring-1 ring-ink/10">
+              <div className="group aspect-square w-full max-w-48 overflow-hidden rounded-2xl bg-ink/5 ring-1 ring-ink/10">
                 {page.founderPhotoUrl && (
                   <Image
                     src={page.founderPhotoUrl}

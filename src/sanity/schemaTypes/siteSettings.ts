@@ -24,7 +24,7 @@ export const siteSettings = defineType({
     defineField({ name: "navPrivacy", title: "\"Privacy policy\" label", type: "string", initialValue: "Privacy policy", group: "nav" }),
     defineField({ name: "navTerms", title: "\"Terms\" label", type: "string", initialValue: "Terms", group: "nav" }),
 
-    defineField({ name: "headerCtaLabel", title: "Header CTA button text", type: "string", initialValue: "Book a consultation", group: "cta" }),
+    defineField({ name: "headerCtaLabel", title: "Header CTA button text", type: "string", initialValue: "Get in touch", group: "cta" }),
   ],
   preview: { prepare: () => ({ title: "Site Settings" }) },
 });

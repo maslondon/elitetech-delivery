@@ -44,7 +44,7 @@ const staticSiteSettings: SiteSettingsData = {
   navContact: primaryNav.find((n) => n.href === "/contact")?.label ?? "Contact",
   navPrivacy: legalNav.find((n) => n.href === "/privacy")?.label ?? "Privacy policy",
   navTerms: legalNav.find((n) => n.href === "/terms")?.label ?? "Terms",
-  headerCtaLabel: "Book a consultation",
+  headerCtaLabel: "Get in touch",
 };
 
 export async function getSiteSettings(): Promise<SiteSettingsData> {
@@ -105,7 +105,7 @@ const staticHomePage: HomePageData = {
     "Websites, apps, digital products and AI that move your business forward",
   heroSubhead:
     "From websites and mobile apps to digital products, AI and automation, and technical delivery — senior expertise, without the overhead of a large agency.",
-  heroPrimaryCta: "Book a consultation",
+  heroPrimaryCta: "Get in touch",
   heroSecondaryCta: "View our services",
   servicesEyebrow: "What we do",
   servicesHeading: "Four ways we help businesses move forward",
@@ -128,8 +128,8 @@ const staticHomePage: HomePageData = {
     { title: "Deliver", body: "We launch, measure what matters, and keep improving." },
   ],
   ctaHeading: "Ready to move forward?",
-  ctaBody: "Book a no-pressure consultation and we'll help you figure out the right starting point.",
-  ctaButtonLabel: "Book a consultation",
+  ctaBody: "A short, no-pressure conversation and we'll help you figure out the right starting point.",
+  ctaButtonLabel: "Get in touch",
 };
 
 export async function getHomePage(): Promise<HomePageData> {
@@ -178,7 +178,7 @@ const staticServicesPage: ServicesPageData = {
   bottomHeading: "Not sure which service fits?",
   bottomBody:
     "That's a normal starting point. Tell us what you're trying to achieve and we'll help you work out the best approach.",
-  bottomButtonLabel: "Book a consultation",
+  bottomButtonLabel: "Get in touch",
 };
 
 export async function getServicesPage(): Promise<ServicesPageData> {
@@ -227,7 +227,7 @@ const staticAboutPage: AboutPageData = {
   ],
   ctaHeading: "Think we could be the right fit?",
   ctaBody: "Have an honest, no-obligation conversation with us before committing to anything.",
-  ctaButtonLabel: "Book a consultation",
+  ctaButtonLabel: "Get in touch",
 };
 
 export async function getAboutPage(): Promise<AboutPageData> {
@@ -279,9 +279,9 @@ export type ContactPageData = {
 
 const staticContactPage: ContactPageData = {
   eyebrow: "Contact",
-  heading: "Book a consultation",
+  heading: "Get in touch",
   intro:
-    "Whether you're planning a new website, exploring a digital product, looking at practical AI opportunities or need help delivering an existing technology initiative, get in touch.",
+    "Whether you're planning a new website, exploring a digital product, looking at practical AI opportunities or need help delivering an existing technology initiative, we'd like to hear from you.",
   emailLabel: "Email",
   phoneLabel: "Phone / WhatsApp",
   responseTimeLabel: "Response time",

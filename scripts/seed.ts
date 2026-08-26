@@ -52,7 +52,7 @@ async function run() {
     navContact: "Contact",
     navPrivacy: "Privacy policy",
     navTerms: "Terms",
-    headerCtaLabel: "Book a consultation",
+    headerCtaLabel: "Get in touch",
   });
 
   // ---------- Footer ----------
@@ -74,7 +74,7 @@ async function run() {
       "Websites, apps, digital products and AI that move your business forward",
     heroSubhead:
       "From websites and mobile apps to digital products, AI and automation, and technical delivery — senior expertise, without the overhead of a large agency.",
-    heroPrimaryCta: "Book a consultation",
+    heroPrimaryCta: "Get in touch",
     heroSecondaryCta: "View our services",
     servicesEyebrow: "What we do",
     servicesHeading: "Four ways we help businesses move forward",
@@ -97,8 +97,8 @@ async function run() {
       { _key: "step-3", title: "Deliver", body: "We launch, measure what matters, and keep improving." },
     ],
     ctaHeading: "Ready to move forward?",
-    ctaBody: "Book a no-pressure consultation and we'll help you figure out the right starting point.",
-    ctaButtonLabel: "Book a consultation",
+    ctaBody: "A short, no-pressure conversation and we'll help you figure out the right starting point.",
+    ctaButtonLabel: "Get in touch",
   });
 
   // ---------- Services ----------
@@ -229,7 +229,7 @@ async function run() {
     bottomHeading: "Not sure which service fits?",
     bottomBody:
       "That's a normal starting point. Tell us what you're trying to achieve and we'll help you work out the best approach.",
-    bottomButtonLabel: "Book a consultation",
+    bottomButtonLabel: "Get in touch",
   });
 
   // ---------- About page ----------
@@ -259,7 +259,7 @@ async function run() {
     ],
     ctaHeading: "Think we could be the right fit?",
     ctaBody: "Have an honest, no-obligation conversation with us before committing to anything.",
-    ctaButtonLabel: "Book a consultation",
+    ctaButtonLabel: "Get in touch",
   });
 
   // ---------- Insights page shell ----------
@@ -410,9 +410,9 @@ async function run() {
     _id: "contactPage",
     _type: "contactPage",
     eyebrow: "Contact",
-    heading: "Book a consultation",
+    heading: "Get in touch",
     intro:
-      "Whether you're planning a new website, exploring a digital product, looking at practical AI opportunities or need help delivering an existing technology initiative, get in touch.",
+      "Whether you're planning a new website, exploring a digital product, looking at practical AI opportunities or need help delivering an existing technology initiative, we'd like to hear from you.",
     emailLabel: "Email",
     phoneLabel: "Phone / WhatsApp",
     responseTimeLabel: "Response time",

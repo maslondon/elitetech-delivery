@@ -9,7 +9,7 @@ import { mailIcon, clockIcon, phoneIcon } from "@/lib/icons";
 export const metadata = pageMetadata({
   title: "Contact",
   description:
-    "Book a consultation with Elite Tech Delivery about a website, web application, AI solution or technical delivery need.",
+    "Get in touch with Elite Tech Delivery about a website, web application, AI solution or technical delivery need.",
   path: "/contact",
 });
 

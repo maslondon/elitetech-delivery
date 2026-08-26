@@ -79,7 +79,7 @@ export default async function ArticlePage({
               A quick conversation costs nothing — tell us what you&apos;re trying to achieve.
             </p>
             <Button href="/contact" variant="primary" className="mt-6">
-              Book a consultation
+              Get in touch
             </Button>
           </div>
         </div>
