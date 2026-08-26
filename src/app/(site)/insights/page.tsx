@@ -49,7 +49,7 @@ export default async function InsightsPage() {
             alt="An overhead view of someone researching with a laptop and open book"
             width={2000}
             height={875}
-            className="h-full w-full object-cover grayscale transition-all duration-500 ease-out group-hover:grayscale-0"
+            className="h-full w-full object-cover grayscale-0 transition-all duration-500 ease-out group-hover:grayscale"
             priority
           />
         </div>

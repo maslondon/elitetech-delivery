@@ -34,7 +34,7 @@ export function Hero({ data }: { data: HomePageData }) {
               alt="A laptop showing code on a shared studio desk, with a colleague working at another machine in the background"
               width={1480}
               height={1350}
-              className="h-full w-full object-cover grayscale transition-all duration-500 ease-out group-hover:grayscale-0"
+              className="h-full w-full object-cover grayscale-0 transition-all duration-500 ease-out group-hover:grayscale"
               priority
             />
           </div>

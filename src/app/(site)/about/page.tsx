@@ -35,7 +35,7 @@ export default async function AboutPage() {
               alt="A team of colleagues gathered round a wooden table in relaxed conversation"
               width={2000}
               height={875}
-              className="h-full w-full object-cover grayscale transition-all duration-500 ease-out group-hover:grayscale-0"
+              className="h-full w-full object-cover grayscale-0 transition-all duration-500 ease-out group-hover:grayscale"
               priority
             />
           </div>
@@ -53,7 +53,7 @@ export default async function AboutPage() {
                     alt={page.founderName}
                     width={1254}
                     height={1254}
-                    className="h-full w-full object-cover grayscale transition-all duration-500 ease-out group-hover:grayscale-0"
+                    className="h-full w-full object-cover grayscale-0 transition-all duration-500 ease-out group-hover:grayscale"
                     priority
                   />
                 )}

@@ -46,7 +46,7 @@ export default async function ServicesPage() {
               alt="A man and woman working through a problem together at a laptop"
               width={2000}
               height={875}
-              className="h-full w-full object-cover grayscale transition-all duration-500 ease-out group-hover:grayscale-0"
+              className="h-full w-full object-cover grayscale-0 transition-all duration-500 ease-out group-hover:grayscale"
               priority
             />
           </div>
