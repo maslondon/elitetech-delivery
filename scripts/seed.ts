@@ -16,6 +16,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { getCliClient } from "sanity/cli";
+import { services as siteServices } from "../src/lib/content/services";
 
 const client = getCliClient({ apiVersion: "2026-01-01" });
 
@@ -102,105 +103,19 @@ async function run() {
   });
 
   // ---------- Services ----------
-  const services = [
-    {
-      id: "service-websites",
-      slug: "websites",
-      shortTitle: "Websites & Apps",
-      title: "Websites & Apps",
-      cardDescription:
-        "The site that brings people to you, the tools on it that turn a visit into an enquiry, and mobile apps where a phone app beats a browser.",
-      summary:
-        "This is the public face of your business — the site people land on, judge you by in five seconds, and either explore or leave. Sometimes that's a clean, fast website; sometimes it's a website plus something people can actually use, like a calculator or booking tool; and sometimes what you actually need is a mobile app.",
-      provide: [
-        "New site builds and full redesigns, from a handful of pages to larger content-led sites",
-        "Interactive tools built into the site itself — calculators, configurators, booking flows, quote tools",
-        "Mobile apps for iOS and Android, where a phone app genuinely beats a mobile-friendly site",
-        "Conversion-focused layouts and clear calls to action",
-        "Performance and SEO built in from day one, not bolted on after",
-      ],
-      outcomes: [
-        "A site — or app — that loads fast and works properly on every device",
-        "Interactive tools that actually help visitors, not just decorate the page",
-        "Messaging that gets your offer across in the first five seconds",
-        "A site you can hand to us for updates, or manage yourself",
-      ],
-      ctaLabel: "Talk about your website",
-      orderRank: 1,
-    },
-    {
-      id: "service-web-applications",
-      slug: "web-applications",
-      shortTitle: "Digital Products",
-      title: "Digital Products",
-      cardDescription:
-        "Software built specifically for your business — a portal your clients log into, a tool your team relies on daily, or a product you sell in its own right. Not a website with extra features bolted on.",
-      summary:
-        "Some things aren't really websites at all — they're software your business runs on: a client portal, an internal tool, a standalone product for your own customers. This is genuinely custom software, built around how your business works rather than the other way round.",
-      provide: [
-        "Bespoke client and staff portals people log into and actually use",
-        "Internal tools that remove manual, repetitive admin",
-        "Workflow and process systems built around how your team really operates",
-        "MVPs designed to test an idea quickly before committing to a larger build",
-      ],
-      outcomes: [
-        "Software that fits how your business already works, not the other way round",
-        "Hours back each week that were going into manual admin and spreadsheets",
-        "A working product you can put in front of real users quickly",
-        "A codebase built to be extended as the product grows, not thrown away",
-      ],
-      ctaLabel: "Discuss a digital product",
-      orderRank: 2,
-    },
-    {
-      id: "service-ai-automation",
-      slug: "ai-automation",
-      shortTitle: "AI & Automation",
-      title: "AI Solutions & Automation",
-      cardDescription:
-        "Practical AI-assisted workflows and automation that remove repetitive work — without the hype.",
-      summary:
-        "AI is a genuinely useful capability when it's applied to a specific, well-understood problem. It's less useful as a headline feature bolted onto something that didn't need it.",
-      provide: [
-        "AI-assisted workflows for content, research and internal processes",
-        "Business process automation that removes repetitive manual work",
-        "AI-enabled features within websites and web applications",
-        "Integrations between the tools your business already uses",
-      ],
-      outcomes: [
-        "Time saved on repetitive, low-value tasks",
-        "AI capability applied where it earns its place, not everywhere at once",
-        "Solutions built with practical, current tools rather than experimental ones",
-        "A clear-eyed view of what AI can and can't sensibly do for your business",
-      ],
-      ctaLabel: "Explore AI for your business",
-      orderRank: 3,
-    },
-    {
-      id: "service-technical-delivery",
-      slug: "technical-delivery",
-      shortTitle: "Technical Delivery",
-      title: "Technical Delivery Consultancy",
-      cardDescription:
-        "Senior delivery support for teams and programmes that need to move with more clarity and pace.",
-      summary:
-        "Good technology often struggles for the same reasons: unclear ownership, delivery that isn't structured to reduce risk, and teams that aren't set up to collaborate well. This is where experienced delivery leadership makes the difference.",
-      provide: [
-        "Technical delivery management for projects and programmes",
-        "Agile delivery support, tailored to how your teams actually work",
-        "Team coaching to improve collaboration and delivery pace",
-        "Programme and project leadership, with closer collaboration across teams",
-      ],
-      outcomes: [
-        "Clearer delivery structure and ownership",
-        "Improved pace without cutting corners",
-        "Teams that collaborate more effectively across disciplines",
-        "Stakeholders who understand progress and risk without having to chase it",
-      ],
-      ctaLabel: "Talk about delivery support",
-      orderRank: 4,
-    },
-  ];
+  // Derived from the site's own content file so the two can never drift apart.
+  const services = siteServices.map((s, i) => ({
+    id: `service-${s.slug}`,
+    slug: s.slug,
+    shortTitle: s.shortTitle,
+    title: s.title,
+    cardDescription: s.cardDescription,
+    summary: s.summary,
+    provide: s.provide,
+    outcomes: s.outcomes,
+    ctaLabel: s.ctaLabel,
+    orderRank: i + 1,
+  }));
 
   for (const s of services) {
     await client.createOrReplace({

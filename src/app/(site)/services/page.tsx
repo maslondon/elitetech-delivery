@@ -64,8 +64,9 @@ export default async function ServicesPage() {
           }
         >
           <Container>
-            <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_1.2fr] lg:gap-9">
-              <div>
+            <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1fr_0.72fr] lg:gap-11">
+              {/* Image alternates sides down the page so four sections don't read as identical blocks */}
+              <div className={i % 2 === 1 ? "lg:order-2" : undefined}>
                 <div className="flex items-center gap-4">
                   <div
                     className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-bronze/15 text-bronze-dark"
@@ -80,6 +81,36 @@ export default async function ServicesPage() {
                 </h2>
                 <p className="mt-5 text-base leading-relaxed text-stone">{service.summary}</p>
 
+                <div className="mt-7 grid grid-cols-1 gap-7 sm:grid-cols-2">
+                  <div>
+                    <h3 className="text-sm font-medium uppercase tracking-[0.15em] text-stone">
+                      What we provide
+                    </h3>
+                    <ul className="mt-3 space-y-2.5">
+                      {service.provide.map((item) => (
+                        <li key={item} className="flex gap-2.5 text-[15px] leading-relaxed text-ink/80">
+                          <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-bronze" aria-hidden="true" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h3 className="text-sm font-medium uppercase tracking-[0.15em] text-stone">
+                      Likely outcomes
+                    </h3>
+                    <ul className="mt-3 space-y-2.5">
+                      {service.outcomes.map((item) => (
+                        <li key={item} className="flex gap-2.5 text-[15px] leading-relaxed text-ink/80">
+                          <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-bronze" aria-hidden="true" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+
                 <div className="mt-8">
                   <Button href="/contact" variant="primary">
                     {service.ctaLabel}
@@ -87,33 +118,15 @@ export default async function ServicesPage() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
-                <div>
-                  <h3 className="text-sm font-medium uppercase tracking-[0.15em] text-stone">
-                    What we provide
-                  </h3>
-                  <ul className="mt-3 space-y-2.5">
-                    {service.provide.map((item) => (
-                      <li key={item} className="flex gap-2.5 text-[15px] leading-relaxed text-ink/80">
-                        <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-bronze" aria-hidden="true" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div>
-                  <h3 className="text-sm font-medium uppercase tracking-[0.15em] text-stone">
-                    Likely outcomes
-                  </h3>
-                  <ul className="mt-3 space-y-2.5">
-                    {service.outcomes.map((item) => (
-                      <li key={item} className="flex gap-2.5 text-[15px] leading-relaxed text-ink/80">
-                        <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-bronze" aria-hidden="true" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
+              <div className={i % 2 === 1 ? "lg:order-1" : undefined}>
+                <div className="group aspect-[4/3] w-full overflow-hidden rounded-2xl bg-ink/5 ring-1 ring-ink/10">
+                  <Image
+                    src={service.image}
+                    alt={service.imageAlt}
+                    width={1200}
+                    height={900}
+                    className="h-full w-full object-cover grayscale-0 transition-all duration-500 ease-out group-hover:grayscale"
+                  />
                 </div>
               </div>
             </div>
