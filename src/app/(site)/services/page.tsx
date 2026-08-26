@@ -64,9 +64,20 @@ export default async function ServicesPage() {
           }
         >
           <Container>
-            <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1fr_0.72fr] lg:gap-11">
-              {/* Image alternates sides down the page so four sections don't read as identical blocks */}
-              <div className={i % 2 === 1 ? "lg:order-2" : undefined}>
+            {/*
+              The image alternates sides down the page so four sections don't read as
+              identical blocks. The track widths swap with it, rather than the items
+              being reordered within fixed tracks — otherwise the image lands in the
+              wide column on alternating rows and renders larger than its neighbours.
+            */}
+            <div
+              className={
+                i % 2 === 1
+                  ? "grid grid-cols-1 items-center gap-8 lg:grid-cols-[0.72fr_1fr] lg:gap-11"
+                  : "grid grid-cols-1 items-center gap-8 lg:grid-cols-[1fr_0.72fr] lg:gap-11"
+              }
+            >
+              <div className={i % 2 === 1 ? "lg:col-start-2 lg:row-start-1" : "lg:col-start-1 lg:row-start-1"}>
                 <div className="flex items-center gap-4">
                   <div
                     className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-bronze/15 text-bronze-dark"
@@ -118,7 +129,7 @@ export default async function ServicesPage() {
                 </div>
               </div>
 
-              <div className={i % 2 === 1 ? "lg:order-1" : undefined}>
+              <div className={i % 2 === 1 ? "lg:col-start-1 lg:row-start-1" : "lg:col-start-2 lg:row-start-1"}>
                 <div className="group aspect-[4/3] w-full overflow-hidden rounded-2xl bg-ink/5 ring-1 ring-ink/10">
                   <Image
                     src={service.image}
