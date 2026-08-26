@@ -30,7 +30,7 @@ export function Hero({ data }: { data: HomePageData }) {
 
           <div className="group aspect-[1480/1350] w-full overflow-hidden rounded-2xl bg-ink/5 ring-1 ring-ink/10">
             <Image
-              src="/images/hero-code-desk.jpg"
+              src="/images/hero-workspace.jpg"
               alt="A laptop showing code on a shared studio desk, with a colleague working at another machine in the background"
               width={1480}
               height={1350}
