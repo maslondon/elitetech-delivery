@@ -33,7 +33,7 @@ export const services: Service[] = [
     ],
     ctaLabel: "Talk about your website",
     image: "/images/service-websites.jpg",
-    imageAlt: "A laptop showing a website checkout form against a plain wall",
+    imageAlt: "A laptop showing a website beside a phone displaying the same site as a mobile app, with a person's hands on both",
   },
   {
     slug: "web-applications",
