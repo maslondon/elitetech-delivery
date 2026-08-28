@@ -40,7 +40,9 @@ export function Wordmark({ variant = "light", className }: WordmarkProps) {
       )}
     >
       <span className={primaryColor}>Elite Tech</span>
-      <span className="text-bronze">Delivery</span>
+      {/* two points down, which breaks the mechanical look of two lines at
+          identical width without pushing "Delivery" back into a subtitle */}
+      <span className="text-[16px] text-bronze sm:text-[20px]">Delivery</span>
     </Link>
   );
 }
