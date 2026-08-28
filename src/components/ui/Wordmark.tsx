@@ -37,7 +37,7 @@ export function Wordmark({ variant = "light", className }: WordmarkProps) {
       className={clsx(
         // gap rather than line-height: the two lines are different sizes, so
         // leading would space them unevenly
-        "group inline-flex flex-col gap-[3px] text-[16px] font-semibold uppercase leading-[1.06] tracking-tight sm:gap-[4px] sm:text-[19px]",
+        "group inline-flex flex-col gap-[3px] text-[17px] font-semibold uppercase leading-[1.06] tracking-tight sm:gap-[4px] sm:text-[21px]",
         className
       )}
     >
@@ -45,7 +45,7 @@ export function Wordmark({ variant = "light", className }: WordmarkProps) {
       {/* four points down — enough to read as a deliberate hierarchy rather
           than an accident, while colour keeps "Delivery" part of the name
           rather than demoting it to a descriptor */}
-      <span className="text-[13px] text-bronze sm:text-[15px]">Delivery</span>
+      <span className="text-[14px] text-bronze sm:text-[17px]">Delivery</span>
     </Link>
   );
 }
