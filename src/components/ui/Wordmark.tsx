@@ -12,9 +12,10 @@ type WordmarkProps = {
 };
 
 /**
- * Two-line, left-aligned lockup. "Elite Tech" carries the weight; "Delivery"
- * is smaller, wide-tracked and set in bronze to read as a descriptor rather
- * than a second name.
+ * Single-line lockup, one type size throughout. "Delivery" is set in bronze
+ * rather than made smaller, so the full name reads as one unit — "Elite Tech"
+ * on its own is shared with several other firms, so the distinguishing word
+ * needs to carry equal weight.
  *
  * The capitals are applied with CSS rather than typed into the markup, so the
  * brand name reads as "Elite Tech Delivery" everywhere it is taken as text —
@@ -29,24 +30,13 @@ export function Wordmark({ variant = "light", className }: WordmarkProps) {
     <Link
       href="/"
       aria-label="Elite Tech Delivery — home"
-      className={clsx("inline-flex flex-col leading-none group", className)}
+      className={clsx(
+        "group inline-flex items-baseline gap-2 text-[18px] font-semibold uppercase leading-none tracking-tight sm:text-[24px]",
+        className
+      )}
     >
-      <span
-        className={clsx(
-          "text-[23px] sm:text-[26px] font-semibold uppercase tracking-tight",
-          primaryColor
-        )}
-      >
-        Elite Tech
-      </span>
-      <span
-        className={clsx(
-          "mt-1 text-[11px] sm:text-[12px] uppercase text-bronze",
-          variant === "header" ? "font-normal tracking-[4px]" : "font-medium tracking-[0.25em]"
-        )}
-      >
-        Delivery
-      </span>
+      <span className={primaryColor}>Elite Tech</span>
+      <span className="text-bronze">Delivery</span>
     </Link>
   );
 }
