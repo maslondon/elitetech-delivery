@@ -53,6 +53,17 @@ const organizationJsonLd = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en-GB" className={`${inter.variable} h-full`}>
+      <head>
+        {/*
+          Marks the document as JavaScript-capable before first paint, so the
+          scroll-reveal styles can hide their content only when there is
+          something able to reveal it again. Inline and synchronous on purpose:
+          deferring it would let the page paint unhidden and then flicker.
+        */}
+        <script
+          dangerouslySetInnerHTML={{ __html: `document.documentElement.classList.add("js")` }}
+        />
+      </head>
       <body className="min-h-full font-sans antialiased">
         <script
           type="application/ld+json"

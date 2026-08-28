@@ -63,3 +63,24 @@ test("unknown route returns a real 404, not a silent 200", async ({ page }) => {
   const response = await page.goto("/this-page-does-not-exist", { waitUntil: "networkidle" });
   expect(response?.status()).toBe(404);
 });
+
+// The scroll-reveal animation hides its content until JavaScript reveals it.
+// If that script never runs, the content must not stay hidden — otherwise
+// whole sections of the homepage are invisible to anyone with JavaScript
+// blocked or broken, which is exactly how this regressed unnoticed before.
+test("revealed content is still visible with JavaScript disabled", async ({ browser }) => {
+  const context = await browser.newContext({ javaScriptEnabled: false });
+  const page = await context.newPage();
+  await page.goto("/");
+
+  const opacities = await page.$$eval(".reveal", (els) =>
+    els.map((el) => getComputedStyle(el).opacity)
+  );
+  const hidden = opacities.filter((o) => Number(o) < 0.9).length;
+
+  await context.close();
+  expect(
+    hidden,
+    `${hidden} of ${opacities.length} reveal elements are invisible without JavaScript`
+  ).toBe(0);
+});

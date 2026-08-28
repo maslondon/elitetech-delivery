@@ -53,20 +53,28 @@ body {
   }
 }
 
-/* Fade-in-on-scroll utility, progressively enhanced via IntersectionObserver */
-.reveal {
+/*
+ * Fade-in-on-scroll, progressively enhanced via IntersectionObserver.
+ *
+ * The hidden state is scoped to `.js`, which an inline script in the document
+ * head adds before first paint. If that script never runs — JavaScript
+ * disabled, blocked, or failed to load — nothing here applies and the content
+ * is simply visible. Hiding unconditionally would leave whole sections of the
+ * page invisible whenever JavaScript did not run.
+ */
+.js .reveal {
   opacity: 0;
   transform: translateY(16px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.reveal.is-visible {
+.js .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .reveal {
+  .js .reveal {
     opacity: 1;
     transform: none;
     transition: none;
