@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/lib/site-config";
+import { socialImage } from "@/lib/metadata";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -23,11 +24,13 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     locale: "en_GB",
     type: "website",
+    images: [socialImage],
   },
   twitter: {
     card: "summary_large_image",
     title: siteConfig.name,
     description: siteConfig.description,
+    images: [socialImage.url],
   },
 };
 
