@@ -35,7 +35,9 @@ export function Wordmark({ variant = "light", className }: WordmarkProps) {
       href="/"
       aria-label="Elite Tech Delivery — home"
       className={clsx(
-        "group inline-flex flex-col text-[18px] font-semibold uppercase leading-[1.06] tracking-tight sm:text-[22px]",
+        // gap rather than line-height: the two lines are different sizes, so
+        // leading would space them unevenly
+        "group inline-flex flex-col gap-[3px] text-[18px] font-semibold uppercase leading-[1.06] tracking-tight sm:gap-[5px] sm:text-[22px]",
         className
       )}
     >
