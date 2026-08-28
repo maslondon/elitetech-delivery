@@ -12,9 +12,14 @@ type WordmarkProps = {
 };
 
 /**
- * Two-line, left-aligned lockup. "ELITE TECH" carries the weight; "DELIVERY"
+ * Two-line, left-aligned lockup. "Elite Tech" carries the weight; "Delivery"
  * is smaller, wide-tracked and set in bronze to read as a descriptor rather
  * than a second name.
+ *
+ * The capitals are applied with CSS rather than typed into the markup, so the
+ * brand name reads as "Elite Tech Delivery" everywhere it is taken as text —
+ * screen readers, copy and paste, and search results — while still rendering
+ * as the uppercase lockup.
  */
 export function Wordmark({ variant = "light", className }: WordmarkProps) {
   const primaryColor =
@@ -28,19 +33,19 @@ export function Wordmark({ variant = "light", className }: WordmarkProps) {
     >
       <span
         className={clsx(
-          "text-[23px] sm:text-[26px] font-semibold tracking-tight",
+          "text-[23px] sm:text-[26px] font-semibold uppercase tracking-tight",
           primaryColor
         )}
       >
-        ELITE TECH
+        Elite Tech
       </span>
       <span
         className={clsx(
-          "mt-1 text-[11px] sm:text-[12px] text-bronze",
+          "mt-1 text-[11px] sm:text-[12px] uppercase text-bronze",
           variant === "header" ? "font-normal tracking-[4px]" : "font-medium tracking-[0.25em]"
         )}
       >
-        DELIVERY
+        Delivery
       </span>
     </Link>
   );
