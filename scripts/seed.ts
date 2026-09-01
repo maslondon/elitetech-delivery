@@ -167,11 +167,11 @@ async function run() {
     ],
     experienceHeading: "Where the experience comes from",
     experienceAreas: [
-      "Streaming and media — Warner Bros. Discovery, including three years running the EMEA roadmap for discovery+, a platform serving millions of viewers",
+      "Streaming and media — four years at Warner Bros. Discovery, running the EMEA roadmap for discovery+, a platform serving millions of viewers; and at Freesat, delivering World Cup coverage and the GDPR rollout",
       "Publishing — delivery management at The Telegraph",
       "Retail and hospitality — Whitbread",
-      "Agency side — AKQA, DigitasLBi and Proximity London, across brands including Hyundai, BP and GSK",
-      "Earlier, through our own consultancy Creative Sanctuary — Samsung, Santander, GSK and AstraZeneca",
+      "Agency side — DigitasLBi, Proximity London and Beamly, across brands including Hyundai, GSK, Marc Jacobs and CoverGirl",
+      "Earlier, through our own consultancy — early-stage startups through to blue-chip brands, across pharmaceutical, FMCG, fashion, automotive and the public sector",
     ],
     experienceNote:
       "That's the scale the experience comes from. Most of what we take on is considerably smaller — and it gets the same standards.",
