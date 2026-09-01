@@ -171,7 +171,7 @@ async function run() {
       "Publishing — delivery management at The Telegraph",
       "Retail and hospitality — Whitbread",
       "Agency side — DigitasLBi, Proximity London and Beamly, across brands including Hyundai, GSK, Marc Jacobs and CoverGirl",
-      "Earlier, through our own consultancy — early-stage startups through to blue-chip brands, across pharmaceutical, FMCG, fashion, automotive and the public sector",
+      "Earlier, through our own consultancy Creative Sanctuary — building sites for brands like Sweaty Betty, for corporates and early-stage startups alike, across fashion, pharmaceutical, FMCG and the public sector",
     ],
     experienceNote:
       "That's the scale the experience comes from. Most of what we take on is considerably smaller — and it gets the same standards.",
