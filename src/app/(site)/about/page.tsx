@@ -90,6 +90,13 @@ export default async function AboutPage() {
                 ))}
               </ul>
 
+              {/*
+                Named organisations of that size can read as "too expensive to
+                bother asking", so this says plainly that smaller work is
+                wanted — the gap is the offer, not a disclaimer.
+              */}
+              <p className="mt-5 text-[15px] leading-relaxed text-stone">{page.experienceNote}</p>
+
               {/* Named organisations invite verification, so make that easy */}
               <a
                 href={siteConfig.linkedin}

@@ -35,6 +35,13 @@ export const aboutPage = defineType({
       of: [{ type: "string" }],
       group: "background",
     }),
+    defineField({
+      name: "experienceNote",
+      title: "Note under the experience list",
+      type: "text",
+      rows: 2,
+      group: "background",
+    }),
 
     defineField({ name: "ctaHeading", title: "Heading", type: "string", group: "cta" }),
     defineField({ name: "ctaBody", title: "Body", type: "text", rows: 2, group: "cta" }),

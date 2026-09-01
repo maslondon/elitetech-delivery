@@ -199,6 +199,7 @@ export type AboutPageData = {
   backgroundParagraphs: string[];
   experienceHeading: string;
   experienceAreas: string[];
+  experienceNote: string;
   ctaHeading: string;
   ctaBody: string;
   ctaButtonLabel: string;
@@ -226,6 +227,8 @@ const staticAboutPage: AboutPageData = {
     "Agency side — AKQA, DigitasLBi and Proximity London, across brands including Hyundai, BP and GSK",
     "Earlier, through our own consultancy Creative Sanctuary — Samsung, Santander, GSK and AstraZeneca",
   ],
+  experienceNote:
+    "That's the scale the experience comes from. Most of what we take on is considerably smaller — and it gets the same standards.",
   ctaHeading: "Think we could be the right fit?",
   ctaBody: "Have an honest, no-obligation conversation with us before committing to anything.",
   ctaButtonLabel: "Get in touch",
