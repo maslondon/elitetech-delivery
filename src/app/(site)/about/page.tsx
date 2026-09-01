@@ -6,6 +6,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { pageMetadata } from "@/lib/metadata";
 import { getAboutPage } from "@/sanity/fetch";
 import { briefcaseIcon } from "@/lib/icons";
+import { siteConfig } from "@/lib/site-config";
 
 export const metadata = pageMetadata({
   title: "About",
@@ -88,6 +89,17 @@ export default async function AboutPage() {
                   </li>
                 ))}
               </ul>
+
+              {/* Named organisations invite verification, so make that easy */}
+              <a
+                href={siteConfig.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-5 inline-flex items-center gap-1.5 text-[15px] font-medium text-bronze-dark underline-offset-4 hover:underline"
+              >
+                Full career history on LinkedIn
+                <span aria-hidden="true">&rarr;</span>
+              </a>
             </div>
           </div>
         </Container>
