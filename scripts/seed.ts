@@ -170,7 +170,7 @@ async function run() {
       "Streaming and media — four years at Warner Bros. Discovery, running the EMEA roadmap for discovery+, a platform serving millions of viewers; and at Freesat, delivering World Cup coverage and the GDPR rollout",
       "Publishing — delivery management at The Telegraph",
       "Retail and hospitality — Whitbread",
-      "Agency side — DigitasLBi, Proximity London and Beamly, including the global CoverGirl rollout for COTY, alongside work for Marc Jacobs, Hyundai and GSK",
+      "Agency side — DigitasLBi, Proximity London and Beamly, including the global COVERGIRL rollout for COTY, alongside work for Marc Jacobs, Hyundai and GSK",
       "Earlier, through our own consultancy Creative Sanctuary — building sites for brands like Sweaty Betty and Ben's Cookies, for corporates and early-stage startups alike, across fashion, pharmaceutical, FMCG and the public sector",
     ],
     experienceNote:
